@@ -17,7 +17,7 @@
 ### My GitHub stats
 
 <p align="center">
-    <img src="https://github-readme-stats.vercel.app/api?username=pseusys&count_private=true&show_icons=true&theme=merko" />
+    <img src="https://github-readme-stats.vercel.app/api?username=pseusys&count_private=true&show_icons=true&theme=gruvbox" />
 </p>
 
 ### My WakaTime stats
