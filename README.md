@@ -8,14 +8,19 @@
 - ⚡ Fun fact: ...
 -->
 
-### GitHub stats
+### I mostly use
 
 <p align="center">
-    <img src="https://github-readme-stats.vercel.app/api?username=pseusys&count_private=true&show_icons=true&theme=merko" />
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pseusys&layout=compact" />
 </p>
 
-### WakaTime stats
+### My GitHub stats
+
+<p align="center">
+    <img src="https://github-readme-stats.vercel.app/api?username=pseusys&count_private=true&show_icons=true&theme=merko" />
+</p>
+
+### My WakaTime stats
 
 <!--START_SECTION:waka-->
 ![Code Time](http://img.shields.io/badge/Code%20Time-39%20hrs%205%20mins-blue)
