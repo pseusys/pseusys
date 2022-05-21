@@ -29,9 +29,9 @@
 
 **🐱 My GitHub Data** 
 
-> 🏆 436 Contributions in the Year 2022
+> 🏆 438 Contributions in the Year 2022
  > 
-> 📦 266.3 kB Used in GitHub's Storage 
+> 📦 266.5 kB Used in GitHub's Storage 
  > 
 > 💼 Opted to Hire
  > 
@@ -43,9 +43,9 @@
 
 ```text
 🌞 Morning    198 commits    ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜   38.3% 
-🌆 Daytime    71 commits     ⬛⬛⬛⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜   13.73% 
+🌆 Daytime    72 commits     ⬛⬛⬛⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜   13.93% 
 🌃 Evening    141 commits    ⬛⬛⬛⬛⬛⬛⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜   27.27% 
-🌙 Night      107 commits    ⬛⬛⬛⬛⬛⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜   20.7%
+🌙 Night      106 commits    ⬛⬛⬛⬛⬛⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜   20.5%
 
 ```
 
@@ -54,7 +54,7 @@
 
 ```text
 💬 Programming Languages: 
-Dart                     2 hrs 10 mins       ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛   100.0%
+Dart                     20 mins             ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛   100.0%
 
 ```
 
