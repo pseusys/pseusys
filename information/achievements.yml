@@ -1,0 +1,12 @@
+achievements:
+  items:
+    - name: IELTS
+      result: 7.5 out of 9 Band
+      desc: A certificate of English language proficiency for non-native English language speakers (2018).
+      profiles:
+        - all
+    - name: Cambridge Assessment Advanced
+      result: C1 grade B
+      desc: A certificate of English language proficiency for non-native English language speakers (2022).
+      profiles:
+        - all

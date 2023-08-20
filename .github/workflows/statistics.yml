@@ -2,6 +2,9 @@ name: Waka Readme
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'README.md'
   schedule:
     - cron: "0 0 * * *"
 
@@ -26,4 +29,6 @@ jobs:
           SHOW_LANGUAGE: "False"
           SHOW_LOC_CHART: "True" 
           COMMIT_SINGLE: "True"
+          PULL_BRANCH_NAME: source
+          PUSH_BRANCH_NAME: main
           SYMBOL_VERSION: 2

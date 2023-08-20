@@ -1,0 +1,54 @@
+projects:
+  items:
+  - name: HogWeedGo
+    tools: Python, Django, PostgreSQL, PostGIS, Docker, TensorFlow, Dart, Flutter
+    desc: My thesis project, potentially dangerous plant species monitoring system (server and client with ML user assistant).
+    link: https://github.com/pseusys/HogWeedGo
+    start: 2021
+    end: 2022
+    profiles:
+      - frontend
+      - backend
+      - devops
+  - name: create-logger
+    tools: Typescript, Pug, Less
+    desc: A web tool for creating colorful console logging modules (ASCII colors) in different programming languages.
+    link: https://pseusys.github.io/create-logger
+    start: 2020
+    end: 2021
+    profiles:
+      - frontend
+  - name: alfonsine
+    tools: Typescript, Pug, Less
+    desc: A web tool for calculation celestial bodies positions according to \href{https://en.wikipedia.org/wiki/Alfonsine_tables}{Alfonsine tables}.
+    link: https://github.com/pseusys/alfonsine
+    start: 2020
+    end: 2021
+    profiles:
+      - frontend
+  - name: Classic Dungeon
+    tools: Kotlin Multiplatform, OpenGL
+    desc: A multiplatform rogue-like game (inspired by watabou's Pixel Dungeon) written in Kotlin from scratch.
+    link: https://github.com/pseusys/ClassicDungeon
+    start: 2021
+    end: 2022
+    profiles:
+      - backend
+      - devops
+  - name: Silentium Morse Messenger
+    tools: Kotlin, Android Framework
+    desc: A server-less messenger based on sending and receiving messages encoded in Morse code, includes Morse code learning tool.
+    link: https://github.com/pseusys/SilentiumMorseMessenger
+    start: 2022
+    end: 2022
+    profiles:
+      - frontend
+  - name: MushOS
+    tools: NASM, C, Makefile
+    desc: An UNIX-like OS, written from scratch.
+    link: https://github.com/pseusys/MushOS
+    start: 2019
+    end: 2020
+    profiles:
+      - backend
+      - devops

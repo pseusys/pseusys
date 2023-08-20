@@ -1,0 +1,56 @@
+skills:
+  total: 3
+  items:
+  - name: Git, Linux (Ubuntu, Mint)
+    years: 3
+    profiles:
+      - frontend
+      - backend
+      - devops
+  - name: Python
+    years: 2
+    profiles:
+      - backend
+      - devops
+  - name: Kotlin, Java, Android
+    years: 2
+    profiles:
+      - backend
+      - devops
+  - name: GitHub Actions, Make, Gradle, Bash
+    years: 2
+    profiles:
+      - frontend
+      - backend
+      - devops
+  - name: Dart, Flutter
+    years: 1
+    profiles:
+      - frontend
+      - devops
+  - name: Docker, Compose
+    years: 1
+    profiles:
+      - backend
+      - devops
+  - name: PostgreSQL, MongoDB
+    years: 1
+    profiles:
+      - backend
+      - devops
+  - name: JS, TS, HTML, CSS
+    years: 1
+    profiles:
+      - frontend
+      - devops
+  - name: C, C++, Qt
+    years: 1
+    profiles:
+      - backend
+      - devops
+  - name: OpenGL
+    years: 1
+  - name: ML, Neural Networks
+    years: 1
+  - name: LaTeX
+    years: 1

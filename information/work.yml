@@ -1,0 +1,23 @@
+work:
+  items:
+    - job: Robotics Intern
+      place: Grenoble Computer Science Laboratory - LIGLAB
+      resp: Comparing, researching and developing person detection with LiDAR algorithms.
+      start: June 23
+      end: ongoing
+      profiles:
+        - all
+    - job: Software Engineer
+      place: DeepPavlov.ai
+      resp: Developing neural network model wrappers, CI/CD, automated testing, scripting, documentation website.
+      start: May 22
+      end: ongoing
+      profiles:
+        - all
+    - job: Full Stack Intern
+      place: Seventest ntts - St. Peterburg, Russia
+      resp: Website backend developing (PHP + Drupal, MySQL), network testing and traffic analysis.
+      start: Jun 21
+      end: Aug 21
+      profiles:
+        - all

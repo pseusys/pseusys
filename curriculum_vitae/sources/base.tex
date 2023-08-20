@@ -1,0 +1,69 @@
+\documentclass[10pt,A4]{article}	
+
+\usepackage[utf8]{inputenc}		
+\usepackage{xstring, xifthen}
+\usepackage[default]{raleway}
+\usepackage[T1]{fontenc}
+\usepackage{moresize}
+\usepackage{fontawesome}
+\usepackage{paracol}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{tikz}				
+\usepackage{transparent}
+\usepackage{color}
+\usepackage[colorlinks = true, urlcolor = blue]{hyperref}
+
+\input{setup}
+\input{support}
+
+
+\begin{document}
+	\columnratio{0.33}
+
+	\setlength{\columnsep}{2.2em}
+	\setlength{\columnseprule}{4pt}
+	\colseprulecolor{lightcol}
+
+	\begin{paracol}{2}
+		\begin{leftcolumn}
+
+			% META IMAGE
+			\begin{center}
+				\includegraphics*[width=0.5\linewidth]{me.jpg}
+			\end{center}
+			\vfill\null
+
+			% CONTACT DETAILS
+			\include{contact}
+			\vfill\null
+
+			% SKILLS
+			\include{skills}
+			\vfill\null
+
+			% ACHIEVEMENTS
+			\include{achievements}
+
+		\end{leftcolumn}
+		\begin{rightcolumn}
+
+			\include{header}
+			\vspace{-12pt}
+
+			\include{education}
+			\vfill\null
+
+			\include{work}
+			\vfill\null
+
+			\include{work}
+			% hotfixes to create fake-space to ensure the whole height is used
+			\vfill
+			\vfill
+			\vfill
+		\end{rightcolumn}
+	\end{paracol}
+\end{document}
