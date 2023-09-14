@@ -19,7 +19,7 @@
 
 ## This repo
 
-Look [here]() to find out about this repo development and building!
+Look [here](./DEVELOPMENT.md) to find out about this repo development and building!
 
 ## Support me
 
