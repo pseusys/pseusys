@@ -1,4 +1,4 @@
-\documentclass[10pt,A4]{article}	
+\documentclass[10pt,a4paper]{article}	
 
 \usepackage[utf8]{inputenc}		
 \usepackage{xstring, xifthen}
@@ -37,29 +37,29 @@
 			\vfill\null
 
 			% CONTACT DETAILS
-			\include{../build/contact}
+			\input{../build/contact}
 			\vfill\null
 
 			% SKILLS
-			\include{../build/skills}
+			\input{../build/skills}
 			\vfill\null
 
 			% ACHIEVEMENTS
-			\include{../build/achievements}
+			\input{../build/achievements}
 
 		\end{leftcolumn}
 		\begin{rightcolumn}
 
-			\include{../build/header}
+			\input{../build/header}
 			\vspace{-12pt}
 
-			\include{../build/education}
+			\input{../build/education}
 			\vfill\null
 
-			\include{../build/work}
+			\input{../build/work}
 			\vfill\null
 
-			\include{../build/projects}
+			\input{../build/projects}
 			% hotfixes to create fake-space to ensure the whole height is used
 			\vfill
 			\vfill

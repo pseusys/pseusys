@@ -2,7 +2,7 @@
 
 from argparse import ArgumentParser
 from pathlib import Path
-from shutil import copytree, rmtree
+from shutil import rmtree
 
 from chevron import render
 
