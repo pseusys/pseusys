@@ -6,6 +6,7 @@ on:
     branches:    
       - source
     paths:
+      - 'information/**'
       - 'curriculum_vitae/**'
       - '.github/workflows/curriculum_vitae.yml'
 
