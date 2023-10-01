@@ -29,7 +29,7 @@ jobs:
       - name: Build CV PDFs
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: curriculum_vitae/build/base.tex
+          root_file: base.tex
           working_directory: curriculum_vitae/build
 
       - name: Save Artifact
