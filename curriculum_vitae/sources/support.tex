@@ -51,10 +51,7 @@
 % param 2:	 event name (job position etc.)
 % param 3: Customer, Employer, Industry
 % param 4: Short description
-% param 5: work done (optional)
-% param 6: technologies include (optional)
-% param 7: achievements (optional)
-\newcommand{\cvevent}[7] {
+\newcommand{\cvevent}[4] {
 	
 	% we wrap this part in a parbox, so title and description are not separated on a pagebreak
 	% if you need more control on page breaks, remove the parbox
@@ -67,11 +64,6 @@
 		\ifthenelse{\isempty{#4}}{}{
 			\cvtext{#4}\\
 		}
-	}
-
-	\ifthenelse{\isempty{#5}}{}{
-		\vspace{4pt}
-		{#5}
 	}
 }
 
