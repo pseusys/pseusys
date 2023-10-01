@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'curriculum_vitae'
+      - 'curriculum_vitae/**'
       - '.github/workflows/curriculum_vitae.yml'
 
 jobs:
