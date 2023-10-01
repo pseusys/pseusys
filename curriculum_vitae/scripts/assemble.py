@@ -17,7 +17,6 @@ curriculum_dir = Path(__file__).parent.parent.resolve()
 def repopulate_build() -> None:
     build_root = curriculum_dir / "build"
     rmtree(build_root, ignore_errors=True)
-    copytree(curriculum_dir / "sources", build_root)
 
 
 def process_templates(profile: CVProfile) -> None:

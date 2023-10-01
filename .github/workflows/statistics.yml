@@ -3,6 +3,8 @@ name: Waka Readme
 on:
   workflow_dispatch:
   push:
+    branches:    
+      - source
     paths:
       - 'README.md'
   schedule:

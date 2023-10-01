@@ -3,6 +3,8 @@ name: Curriculum Vitae
 on:
   workflow_dispatch:
   push:
+    branches:    
+      - source
     paths:
       - 'curriculum_vitae/**'
       - '.github/workflows/curriculum_vitae.yml'
@@ -30,11 +32,11 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: base.tex
-          working_directory: curriculum_vitae/build
+          working_directory: curriculum_vitae/sources
 
       - name: Save Artifact
         uses: actions/upload-artifact@v3
         with:
           name: CVs
-          path: curriculum_vitae/build/base.pdf
+          path: curriculum_vitae/sources/base.pdf
           retention-days: 3
