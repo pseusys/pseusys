@@ -1,0 +1,40 @@
+name: Curriculum Vitae
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'curriculum_vitae'
+      - '.github/workflows/curriculum_vitae.yml'
+
+jobs:
+  generate-cv:
+    name: Generate CV variants for different profiles
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Install Dependencies
+        run: make venv
+
+      - name: Build CV sources
+        run: make build-cv
+
+      - name: Build CV PDFs
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: curriculum_vitae/build/base.tex
+          working_directory: curriculum_vitae/build
+
+      - name: Save Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: CVs
+          path: curriculum_vitae/build/base.pdf
+          retention-days: 3
