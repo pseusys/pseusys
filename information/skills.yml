@@ -1,7 +1,7 @@
 skills:
   total: 3
   items:
-  - name: Git, Linux (Ubuntu, Mint)
+  - name: Git, Linux
     years: 3
     profiles:
       - frontend

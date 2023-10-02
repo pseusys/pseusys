@@ -31,10 +31,10 @@
 % param 2: level (for example in years)
 % param 3: percent, values range from 0 to 1
 \newcommand{\cvskill}[3] {
-	\begin{tabular*}{1\mpwidth}{p{0.72\mpwidth}  r}
+	\begin{tabular*}{1\mpwidth}{p{0.72\mpwidth} r}
  		\textcolor{black}{\textbf{#1}} & \textcolor{maincol}{#2} \\
 	\end{tabular*}
-	
+
 	\hspace{4pt}
 	\begin{tikzpicture}[scale=1,rounded corners=2pt,very thin]
 		\fill [lightcol] (0,0) rectangle (1\mpwidth, 0.15);
@@ -48,7 +48,7 @@
 % Additional Information can be passed in text or list form (or other environments).
 % the work you did
 % param 1: time-frame i.e. Sep 14 - Jan 15 etc.
-% param 2:	 event name (job position etc.)
+% param 2:   event name (job position etc.)
 % param 3: Customer, Employer, Industry
 % param 4: Short description
 \newcommand{\cvevent}[4] {
@@ -59,9 +59,11 @@
 		\begin{tabular*}{1\mpwidth}{p{0.72\mpwidth}  r}
 	 		\textcolor{black}{\textbf{#2}} & \colorbox{maincol}{\makebox[0.25\mpwidth]{\textcolor{white}{#1}}} \\
 			\textcolor{maincol}{\textbf{#3}} & \\
-		\end{tabular*}\\[4pt]
+		\end{tabular*}
 	
-		\ifthenelse{\isempty{#4}}{}{
+		\ifthenelse{\isempty{#4}}{
+			\vspace{14pt}
+		}{
 			\cvtext{#4}\\
 		}
 	}
