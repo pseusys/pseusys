@@ -31,13 +31,15 @@ class ProfileDict(Dict):
         filtered = list()
         for elem in iterable:
             profs = elem.get(self._PROFILE_KEY, None)
-            if profs is not None:
-                if self.profile.value in profs and self.profile is not CVProfile.NONE or CVProfile.ALL.value in profs:
+            if self.profile is CVProfile.NONE:
+                continue
+            elif self.profile is CVProfile.ALL:
+                filtered += [elem]
+            elif profs is not None:
+                if self.profile.value in profs or CVProfile.ALL.value in profs:
                     filtered += [elem]
                 elif not isinstance(profs, List):
                     raise RuntimeError(f"Profile key '{self._PROFILE_KEY}' should be a list on every element!")
-            elif self.profile is CVProfile.ALL:
-                filtered += [elem]
         return filtered
 
     def __getitem__(self, key: str):
