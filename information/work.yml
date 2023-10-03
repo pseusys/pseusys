@@ -3,15 +3,15 @@ work:
     - job: Robotics Intern
       place: Grenoble Computer Science Laboratory - LIGLAB
       resp: Comparing, researching and developing person detection with LiDAR algorithms.
-      start: June '23
-      end: August '23
+      start: Jun '23
+      end: Aug '23
       profiles:
         - all
     - job: Software Engineer
       place: DeepPavlov.ai
       resp: Developing neural network model wrappers, CI/CD, automated testing, scripting, documentation website.
       start: May '22
-      end: ongoing
+      end: now
       profiles:
         - all
     - job: Full Stack Intern

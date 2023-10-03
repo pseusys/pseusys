@@ -10,6 +10,7 @@ projects:
       - frontend
       - backend
       - devops
+      - all
   - name: create-logger
     tools: Typescript, Pug, Less
     desc: A web tool for creating colorful console logging modules (ASCII colors) in different programming languages.
@@ -18,6 +19,7 @@ projects:
     end: 2021
     profiles:
       - frontend
+      - all
   - name: alfonsine
     tools: Typescript, Pug, Less
     desc: A web tool for calculation celestial bodies positions according to \href{https://en.wikipedia.org/wiki/Alfonsine_tables}{Alfonsine tables}.
@@ -26,6 +28,7 @@ projects:
     end: 2021
     profiles:
       - frontend
+      - all
   - name: Classic Dungeon
     tools: Kotlin Multiplatform, OpenGL
     desc: A multiplatform rogue-like game (inspired by watabou's Pixel Dungeon) written in Kotlin from scratch.
@@ -35,6 +38,7 @@ projects:
     profiles:
       - backend
       - devops
+      - all
   - name: Silentium Morse Messenger
     tools: Kotlin, Android Framework
     desc: A server-less messenger based on sending and receiving messages encoded in Morse code, includes Morse code learning tool.
@@ -43,6 +47,7 @@ projects:
     end: 2022
     profiles:
       - frontend
+      - all
   - name: MushOS
     tools: NASM, C, Makefile
     desc: An UNIX-like OS, written from scratch.
@@ -52,3 +57,4 @@ projects:
     profiles:
       - backend
       - devops
+      - all
