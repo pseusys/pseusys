@@ -38,4 +38,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release: Curriculum Vitae
-          files: curriculum_vitae/pdf/*.pdf
+          files: ./curriculum_vitae/pdf/*.pdf
