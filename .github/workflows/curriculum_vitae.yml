@@ -16,26 +16,26 @@ jobs:
     name: Generate CV variants for different profiles
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout repository 🛎️
         uses: actions/checkout@v4
 
-      - name: Setup Python 3.11
+      - name: Setup Python 3.11 🐍
         uses: actions/setup-python@v4
         with:
           python-version: 3.11
       
-      - name: Pull LaTeX builder image
+      - name: Pull LaTeX builder image 🖼️
         run: docker pull blang/latex
 
-      - name: Install Dependencies
+      - name: Install dependencies 📥
         run: make venv
 
-      - name: Build CVs
+      - name: Build CVs 👤
         run: make build-all
 
-      - name: Save Artifact
-        uses: actions/upload-artifact@v3
+      - name: Update release 📩
+        uses: johnwbyrd/update-release@v1.0.0
         with:
-          name: CVs
-          path: curriculum_vitae/pdf/*.pdf
-          retention-days: 3
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release: Curriculum Vitae
+          files: curriculum_vitae/pdf/*.pdf
