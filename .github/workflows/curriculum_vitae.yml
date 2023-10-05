@@ -38,6 +38,5 @@ jobs:
         with:
           file_glob: true
           overwrite: true
-          make_latest: true
           tag: curriculum-vitae
           file: curriculum_vitae/pdf/*.pdf
