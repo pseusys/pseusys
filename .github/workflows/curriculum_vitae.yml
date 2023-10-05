@@ -34,8 +34,10 @@ jobs:
         run: make build-all
 
       - name: Update release 📩
-        uses: johnwbyrd/update-release@v1.0.0
+        uses: svenstaro/upload-release-action@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          release: Curriculum Vitae
-          files: ./curriculum_vitae/pdf/*.pdf
+          file_glob: true
+          overwrite: true
+          make_latest: true
+          tag: curriculum-vitae
+          file: curriculum_vitae/pdf/*.pdf
