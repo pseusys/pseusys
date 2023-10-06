@@ -10,9 +10,21 @@ The `README` is accompanied with all built images in a single commit.
 
 ### Build and run
 
-```python3
-make build-cv
-```
+- For a single profile:
+
+  ```shell
+  make build-cv PROFILE=[PROFILE_NAME]
+  ```
+
+    where `PROFILE_NAME` should be one of `none`, `frontend`, `backend`, `devops`, `all`.
+
+- For all profiles at once:
+
+  ```python3
+  make build-all-cv
+  ```
+
+> The generated files will be named according to profile and placed into `curriculum_vitae/pdf/`.
 
 ### TODOs
 
