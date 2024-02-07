@@ -1,5 +1,12 @@
 work:
   items:
+    - job: Full Stack Intern
+      place: Amadeus - Nice, France
+      resp: Mutation testing for large-scale C++ project and test set development.
+      start: Feb '24
+      end: Aug '24
+      profiles:
+        - all
     - job: Robotics Intern
       place: Grenoble Computer Science Laboratory - LIGLAB
       resp: Comparing, researching and developing person detection with LiDAR algorithms.
