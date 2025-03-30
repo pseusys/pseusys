@@ -1,5 +1,12 @@
 work:
   items:
+    - job: Backend Developing Intern
+      place: Ansys - Lyon, France
+      resp: Enhancing simulation framework by introducing code generation.
+      start: Feb '25
+      end: Aug '25
+      profiles:
+        - all
     - job: Full Stack Intern
       place: Amadeus - Nice, France
       resp: Mutation testing for large-scale C++ project and test set development.
@@ -18,7 +25,7 @@ work:
       place: DeepPavlov.ai
       resp: Developing neural network model wrappers, CI/CD, automated testing, scripting, documentation website.
       start: May '22
-      end: now
+      end: Jan '25
       profiles:
         - all
     - job: Full Stack Intern

@@ -6,8 +6,8 @@ on:
     branches:    
       - source
     paths:
-      - 'information/**'
-      - 'curriculum_vitae/**'
+      - 'information/*.yml'
+      - 'curriculum_vitae/**/*'
       - '.github/workflows/curriculum_vitae.yml'
       - 'Makefile'
 

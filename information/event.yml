@@ -1,5 +1,5 @@
 events:
-  etu-seminar:
-    name: Scientific and technical seminar
-    date: Feb 2022
-    description: Conducted by ETU MOEVM department
+  items:
+    - name: Academic exchange with HKUST
+      date: Sept 2024 - Jan 2025
+      description: Has taken part in academic exchange with HKUST school of science
