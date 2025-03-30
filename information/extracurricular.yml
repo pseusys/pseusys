@@ -1,6 +1,7 @@
 extracurricular:
-  latin: ECCL Vestibulum (silver), passed in 2014.
-  samsung: Samsung IT school, student, 2017.
-  psychology: SPBSU Winter Psychology School Conference, participant, 2020.
-  arctic: BEAC Youth Model Conference, participant, 2019.
-  seminar: Scientific and technical seminar, conducted by ETU MOEVM department, participant, 2022.
+  items:
+    - description: ECCL Vestibulum (silver), passed in 2014.
+    - description: Samsung IT school, student, 2017.
+    - description: SPBSU Winter Psychology School Conference, participant, 2020.
+    - description: BEAC Youth Model Conference, participant, 2019.
+    - description: Scientific and technical seminar, conducted by ETU MOEVM department, participant, 2022.
