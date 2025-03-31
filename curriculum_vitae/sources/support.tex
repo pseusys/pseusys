@@ -76,10 +76,10 @@
 % param 3: customer, employer, etc,. (optional)
 % param 4: info text (optional)
 \newcommand{\cvmetaevent}[4] {
-	\textcolor{maincol} {\cvtext{\textbf{\begin{flushleft}#1\end{flushleft}}}}
+	\textcolor{maincol} {\cvtext{\textbf{#1}}}
 
 	\ifthenelse{\isempty{#2}}{}{
-	\textcolor{darkcol} {\cvtext{\textbf{#2}} }
+		\textcolor{darkcol} {\cvtext{\textbf{#2}} }
 	}
 
 	\ifthenelse{\isempty{#3}}{}{
