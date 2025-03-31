@@ -2,9 +2,11 @@
 .DEFAULT_GOAL := help
 
 SHELL = /bin/bash
+.SHELLFLAGS=-c -e
+
 PATH := venv/bin:$(PATH)
 
-PROFILES = frontend backend devops all none
+PROFILES = frontend backend devops all
 PROFILE = all
 
 

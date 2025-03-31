@@ -31,9 +31,7 @@ class ProfileDict(Dict):
         filtered = list()
         for elem in iterable:
             profs = elem.get(self._PROFILE_KEY, None)
-            if self.profile is CVProfile.NONE:
-                continue
-            elif self.profile is CVProfile.ALL:
+            if self.profile is CVProfile.ALL:
                 filtered += [elem]
             elif profs is not None:
                 if self.profile.value in profs or CVProfile.ALL.value in profs:

@@ -1,5 +1,13 @@
 projects:
   items:
+  - name: SeasideVPN
+    tools: Python, Go, Rust, Docker
+    desc: A distributed peer-to-peer VPN system, focused on being fast, secure and invisible to traffic analysis tools.
+    link: https://github.com/pseusys/SeasideVPN
+    start: 2023
+    end: now
+    profiles:
+      - all
   - name: HogWeedGo
     tools: Python, Django, PostgreSQL, PostGIS, Docker, TensorFlow, Dart, Flutter
     desc: My thesis project, potentially dangerous plant species monitoring system (server and client with ML user assistant).
@@ -7,9 +15,7 @@ projects:
     start: 2021
     end: 2022
     profiles:
-      - frontend
-      - backend
-      - devops
+      - all
   - name: create-logger
     tools: Typescript, Pug, Less
     desc: A web tool for creating colorful console logging modules (ASCII colors) in different programming languages.

@@ -16,7 +16,7 @@ The `README` is accompanied with all built images in a single commit.
   make build-cv PROFILE=[PROFILE_NAME]
   ```
 
-    where `PROFILE_NAME` should be one of `none`, `frontend`, `backend`, `devops`, `all`.
+    where `PROFILE_NAME` should be one of `frontend`, `backend`, `devops`, `all`.
 
 - For all profiles at once:
 
