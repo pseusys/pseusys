@@ -56,14 +56,20 @@
 	% we wrap this part in a parbox, so title and description are not separated on a pagebreak
 	% if you need more control on page breaks, remove the parbox
 	\parbox{\mpwidth}{
-		\begin{tabular*}{1\mpwidth}{p{0.72\mpwidth}  r}
-	 		\textcolor{black}{\textbf{#2}} & \colorbox{maincol}{\makebox[0.25\mpwidth]{\textcolor{white}{#1}}} \\
-			\textcolor{maincol}{\textbf{#3}} & \\
-		\end{tabular*}
-	
-		\ifthenelse{\isempty{#4}}{
-			\vspace{14pt}
+
+		\ifthenelse{\isempty{#3}} {
+			\begin{tabular*}{1\mpwidth}{p{0.72\mpwidth}  r}
+				\textcolor{black}{\textbf{#2}} & \colorbox{maincol}{\makebox[0.25\mpwidth]{\textcolor{white}{#1}}} \\
+			\end{tabular*}
+			\vspace{4pt}
 		}{
+			\begin{tabular*}{1\mpwidth}{p{0.72\mpwidth}  r}
+				\textcolor{black}{\textbf{#2}} & \colorbox{maincol}{\makebox[0.25\mpwidth]{\textcolor{white}{#1}}} \\
+				\textcolor{maincol}{\textbf{#3}} & \\
+			\end{tabular*}
+		}
+	
+		\ifthenelse{\isempty{#4}}{}{
 			\cvtext{#4}\\
 		}
 	}
