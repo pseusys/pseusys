@@ -1,0 +1,42 @@
+name: Curriculum Vitae
+
+on:
+  workflow_dispatch:
+  push:
+    branches:    
+      - source
+    paths:
+      - 'information/*.yml'
+      - 'curriculum_vitae/**/*'
+      - '.github/workflows/curriculum_vitae.yml'
+      - 'Makefile'
+
+jobs:
+  generate-cv:
+    name: Generate CV variants for different profiles
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository 🛎️
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.11 🐍
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+      
+      - name: Pull LaTeX builder image 🖼️
+        run: docker pull blang/latex
+
+      - name: Install dependencies 📥
+        run: make venv
+
+      - name: Build CVs 👤
+        run: make build-all-cv
+
+      - name: Update release 📩
+        uses: svenstaro/upload-release-action@v2
+        with:
+          file_glob: true
+          overwrite: true
+          tag: curriculum-vitae
+          file: curriculum_vitae/pdf/*.pdf

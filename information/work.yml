@@ -1,0 +1,37 @@
+work:
+  items:
+    - job: Backend Developing Intern
+      place: Ansys - Lyon, France
+      resp: Enhancing simulation framework by introducing code generation.
+      start: Feb '25
+      end: Aug '25
+      profiles:
+        - all
+    - job: Full Stack Intern
+      place: Amadeus - Nice, France
+      resp: Mutation testing for large-scale C++ project and test set development.
+      start: Feb '24
+      end: Aug '24
+      profiles:
+        - all
+    - job: Robotics Intern
+      place: Grenoble Computer Science Laboratory - LIGLAB
+      resp: Comparing, researching and developing person detection with LiDAR algorithms.
+      start: Jun '23
+      end: Aug '23
+      profiles:
+        - all
+    - job: Software Engineer
+      place: DeepPavlov.ai
+      resp: Developing neural network model wrappers, CI/CD, automated testing, scripting, documentation website.
+      start: May '22
+      end: Jan '25
+      profiles:
+        - all
+    - job: Full Stack Intern
+      place: Seventest ntts - St. Peterburg, Russia
+      resp: Website backend developing (PHP + Drupal, MySQL), network testing and traffic analysis.
+      start: Jun '21
+      end: Aug '21
+      profiles:
+        - none

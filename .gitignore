@@ -1,0 +1,6 @@
+.vscode
+venv
+**/__pycache__
+
+curriculum_vitae/build
+curriculum_vitae/pdf

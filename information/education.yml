@@ -1,0 +1,23 @@
+education:
+  items:
+    - title: Ms. Sc. - Informatics
+      start: 2023
+      end: now
+      place: Université Grenoble Alpes / Grenoble INP - Ensimag
+      result: \phantom
+      profiles:
+        - all
+    - title: B. Tech. - Software Engineering
+      start: 2018
+      end: 2022
+      place: St. Peterburg Electrotechnical University (ETU)
+      result: Passed with **4.4** of **5.0** average score.
+      profiles:
+        - all
+    - title: High school
+      start: 2011
+      end: 2018
+      place: St. Peterburg Classical Gymnasium \#610
+      result: Passed with **4.8** of **5.0** average score.
+      profiles:
+        - none

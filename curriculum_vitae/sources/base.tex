@@ -1,0 +1,81 @@
+\documentclass[10pt,a4paper]{article}	
+
+\usepackage[utf8]{inputenc}		
+\usepackage{xstring, xifthen}
+\usepackage[default]{raleway}
+\usepackage[T1]{fontenc}
+\usepackage{moresize}
+\usepackage{fontawesome}
+\usepackage{paracol}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{tikz}				
+\usepackage{transparent}
+\usepackage{color}
+\usepackage[colorlinks = true, urlcolor = blue]{hyperref}
+
+\input{setup}
+\input{support}
+
+
+\begin{document}
+	\columnratio{0.33}
+
+	\setlength{\columnsep}{2.2em}
+	\setlength{\columnseprule}{4pt}
+	\colseprulecolor{lightcol}
+
+	\begin{paracol}{2}
+		\begin{leftcolumn}
+
+			% META IMAGE
+			\begin{center}
+				\includegraphics*[width=0.5\linewidth]{../me.jpg}
+			\end{center}
+
+			% CONTACT DETAILS
+			\input{../build/contact}
+			\vfill\null
+
+			% SKILLS
+			\input{../build/skills}
+			\vfill\null
+
+			% CERTIFICATIONS
+			\input{../build/certifications}
+
+		\end{leftcolumn}
+
+		\begin{rightcolumn}
+
+			% HEADER
+			\input{../build/header}
+			\vspace{-12pt}
+
+			% EDUCATION
+			\input{../build/education}
+			\vfill\null
+
+			% WORK EXPERIENCE
+			\input{../build/work}
+			\vfill\null
+
+			% PROJECTS
+			\input{../build/projects}
+
+			% EVENTS
+			\input{../build/events}
+
+			% EXTRACURRICULAR
+			\input{../build/extracurricular}
+
+			% hotfixes to create fake-space to ensure the whole height is used
+			\vfill
+			\vfill
+			\vfill
+
+		\end{rightcolumn}
+	\end{paracol}
+\end{document}
