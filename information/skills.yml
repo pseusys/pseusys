@@ -2,22 +2,22 @@ skills:
   items:
   - name: Git, Linux
     years: 3
-    profiles: ["frontend", "backend", "devops"]
-  - name: Python
-    years: 2
-    profiles: ["backend", "devops"]
+    profiles: ["all"]
   - name: Kotlin, Java, Android
+    years: 2
+    profiles: ["all"]
+  - name: Python
     years: 2
     profiles: ["backend", "devops"]
   - name: GitHub Actions, Make, Gradle, Bash
     years: 2
-    profiles: ["frontend", "backend", "devops"]
+    profiles: ["backend", "devops"]
   - name: C, C++, Qt
     years: 2
     profiles: ["backend", "devops"]
   - name: Dart, Flutter
     years: 1
-    profiles: ["backend", "devops"]
+    profiles: ["frontend", "devops"]
   - name: Docker, Compose
     years: 1
     profiles: ["backend", "devops"]
@@ -29,7 +29,10 @@ skills:
     profiles: ["frontend", "devops"]
   - name: OpenGL
     years: 1
+    profiles: ["frontend"]
   - name: ML, Neural Networks
     years: 1
+    profiles: ["backend"]
   - name: LaTeX
     years: 1
+    profiles: ["none"]
