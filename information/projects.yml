@@ -26,7 +26,7 @@ projects:
       - frontend
   - name: alfonsine
     tools: Typescript, Pug, Less
-    desc: A web tool for calculation celestial bodies positions according to \href{https://en.wikipedia.org/wiki/Alfonsine_tables}{Alfonsine tables}.
+    desc: A web tool for calculation celestial bodies positions according to [Alfonsine tables](https://en.wikipedia.org/wiki/Alfonsine_tables).
     link: https://github.com/pseusys/alfonsine
     start: 2020
     end: 2021
