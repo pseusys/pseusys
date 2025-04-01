@@ -32,6 +32,18 @@ This markdown is processed before including into `LaTeX` sources.
 Only subset of markdown is supported for now, although it can be expanded if needed.
 Currently supported syntax: bold text, links.
 
+#### Lambda functions
+
+Compiler makes use of [chevron](https://github.com/noahmorrison/chevron) lambdas and defines a few functions that are available during build time.
+The functions can accept one or more comma-separated arguments, that will be treated differently.
+Keep in mind that since the functions use `eval` to evaluate string representation of python code, they are terribly unsafe!
+Here are the function descriptions:
+
+1. `count`: accepts one argument that should be a mathematical expression in pythonic syntax; evaluates the expression and returns the result.
+2. `max`: accepts two arguments: a `mustache` iterable and a string key; evaluates and returns the maximum key value over all the iterable elements.
+
+> NB! It [is possible](https://stackoverflow.com/a/65911196) to access parent iterable from inside of a child in `mustache`.
+
 ### Build and run
 
 Following commands can be used for automated CV generation.

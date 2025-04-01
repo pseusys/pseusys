@@ -1,12 +1,9 @@
-from enum import Enum, unique
+from enum import StrEnum, unique
 
 
 @unique
-class CVProfile(Enum):
+class CVProfile(StrEnum):
     FRONTEND = "frontend"
     BACKEND = "backend"
     DEVOPS = "devops"
     ALL = "all"
-
-    def __str__(self):
-        return self.value

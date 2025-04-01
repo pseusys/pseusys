@@ -6,16 +6,25 @@ from support import CVProfile
 class ProfileDict(Dict):
     _PROFILE_KEY = "profiles"
     _COUNT_KEY = "count"
+    _MAX_KEY = "max"
 
     def __init__(self, info: Dict, file: str, profile: CVProfile):
         self.info = info
         self.file = file
         self.profile = profile
-        self.functions = {self._COUNT_KEY: self._count}
+        self.functions = {
+            self._COUNT_KEY: self._count,
+            self._MAX_KEY: self._max
+        }
 
     def _count(self, text: str, render: Callable) -> str:
         expression = render(text, self)
         return str(eval(expression))
+
+    def _max(self, text: str, render: Callable) -> str:
+        container, key = (arg.strip() for arg in text.split(","))
+        iterable = [elem[key] for elem in eval(render(container, self))]
+        return str(max(iterable))
 
     def _find_subdict(self, subinfo: Dict, subpath: str) -> str:
         if "." in subpath:
