@@ -57,21 +57,20 @@
 	% if you need more control on page breaks, remove the parbox
 	\parbox{\mpwidth}{
 
-		\ifthenelse{\isempty{#3}} {
-			\begin{tabular*}{1\mpwidth}{p{0.72\mpwidth}  r}
-				\textcolor{black}{\textbf{#2}} & \colorbox{maincol}{\makebox[0.25\mpwidth]{\textcolor{white}{#1}}} \\
-			\end{tabular*}
-			\vspace{4pt}
-		}{
-			\begin{tabular*}{1\mpwidth}{p{0.72\mpwidth}  r}
-				\textcolor{black}{\textbf{#2}} & \colorbox{maincol}{\makebox[0.25\mpwidth]{\textcolor{white}{#1}}} \\
-				\textcolor{maincol}{\textbf{#3}} & \\
-			\end{tabular*}
-		}
+		\begin{tabular*}{1\mpwidth}{p{0.72\mpwidth}  r}
+			\textcolor{black}{\textbf{#2}} & \colorbox{maincol}{\makebox[0.25\mpwidth]{\textcolor{white}{#1}}} \\
+		\ifx\relax#3\relax
+		\end{tabular*}
+		\vspace{4pt}
+		\else
+			\textcolor{maincol}{\textbf{#3}} & \\
+		\end{tabular*}
+		\fi
 	
-		\ifthenelse{\isempty{#4}}{}{
+		\ifx\relax#4\relax
+		\else
 			\cvtext{#4}\\
-		}
+		\fi
 	}
 }
 
@@ -84,13 +83,15 @@
 \newcommand{\cvmetaevent}[4] {
 	\textcolor{maincol} {\cvtext{\textbf{#1}}}
 
-	\ifthenelse{\isempty{#2}}{}{
+	\ifx\relax#2\relax
+	\else
 		\textcolor{darkcol} {\cvtext{\textbf{#2}} }
-	}
+	\fi
 
-	\ifthenelse{\isempty{#3}}{}{
-		\cvtext{{ \textcolor{darkcol} {#3} }}\\
-	}
+	\ifx\relax#3\relax
+	\else
+	\cvtext{{ \textcolor{darkcol} {#3} }}\\
+	\fi
 
 	\cvtext{#4}\\[14pt]
 }

@@ -29,8 +29,32 @@ NB! Profile `all` is equivalent to `backend`, `fullstack` and `backend` together
 
 All the information fields can include markdown code.
 This markdown is processed before including into `LaTeX` sources.
+Unfortunately, this markdown has to be treated specially: `mustache` tends to break lines randomly upon template evaluation and that often messes up markdown syntax.
+
 Only subset of markdown is supported for now, although it can be expanded if needed.
-Currently supported syntax: bold text, links.
+Currently supported syntax:
+
+1. Bold:
+   ```markdown
+   **Text in Bold**
+   ```
+2. Links:
+   ```markdown
+   [Example Link](https://example.com)
+   ```
+3. Lists:
+   ```markdown
+   + Element 1
+   + Element 2
+   ```
+4. Line breaks (not standard!):
+   ```markdown
+   - Line 1
+   - Line 2
+   ```
+
+That is, a special rule is used for treating line breaks:
+> All the line breaks are removed except for the ones that are parts of lists, where lists prefixed by `+` are rendered as lists and lists prefixed by `-` are rendered just as separate lines.
 
 #### Lambda functions
 
