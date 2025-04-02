@@ -1,35 +1,53 @@
 work:
   items:
+
     - job: Backend Developing Intern
       place: Ansys - Lyon, France
       resp: |
         + Was part of a team responsible for data storage and transfer optimization between different parts of [AnsysDPF](https://dpf.docs.pyansys.com) infrastructure.
-        + Proposed and implemented code generation design; internal data structures have been wrapped with consistent and schema-based generated user interfaces.
+        + Proposed and implemented in Python code generation design; internal data structures have been wrapped with consistent and schema-based generated user interfaces (in Python, C++ and C#).
         + As a result, codebase maintenance needs were reduced, codestyle and documentation coverage increased and further development sped up significantly.
       start: Feb '25
       end: Aug '25
       profiles: ["backend", "frontend"]
+
     - job: Full Stack Intern
       place: Amadeus - Nice, France
-      resp: Mutation testing for large-scale C++ project and test set development.
+      resp: |
+        + Worked in-between of teams responsible for Amadeus ticket search engine testing and development.
+        + Developed a mutation testing framework in Python, that was adding minor changes to the C++ source code and then checking if those changes are caught by existing test suite.
+        + Periodical running of the framework helped improving test coverage and reducing number of human-factor bugs, like typos and misspellings (still, it takes considerable amount of time).
       start: Feb '24
       end: Aug '24
-      profiles: ["fullstack"]
+      profiles: ["devops"]
+
     - job: Robotics Intern
       place: Grenoble Computer Science Laboratory - LIGLAB
-      resp: Comparing, researching and developing person detection with LiDAR algorithms.
+      resp: |
+        + Explored possibility of replacing algorithm-based navigation mechanism used in laboratory robots equipped with 2D LiDARs with machine-learning based one.
+        + Has developed C++ and Python interfaces for RobotOS, allowing different navigation algorithm integration, compared them both physically and in simulation.
+        + Even though trained neural networks didn't outperform existing algorithms (primarily due to annotation issues in LIDAR records used for training), still the developed interfaces are used in further researches.
       start: Jun '23
       end: Aug '23
-      profiles: ["backend", "fullstack"]
+      profiles: ["backend", "devops"]
+
     - job: Software Engineer
-      place: DeepPavlov.ai
-      resp: Developing neural network model wrappers, CI/CD, automated testing, scripting, documentation website.
+      place: DeepPavlov.ai - Remote, Part-Time
+      resp: |
+        + Taken part in [chatsky](https://github.com/deeppavlov/chatsky) dialog bot creation framework development.
+        + Was responsible for both basic framework functionality implementation (in Python), asynchronous database integrations (Redis, MongoDB, MeSQL, SQLite, PostgreSQL) and static documentation website generation (using Sphinx, JavaScript ind CSS).
+        + Was involved in multiple user interfaces creation (CLI, Telegram, Whatsapp and Discord bindings) and worked on CI/CD pipeline enhancement in GitHub Actions.
+        + All that expanded framework core use cases, improved performance, increased test coverage, made documentation easily available, and contributed both to better developer and user experience.
       start: May '22
       end: Jan '25
       profiles: ["all"]
+
     - job: Full Stack Intern
-      place: Seventest ntts - St. Peterburg, Russia
-      resp: Website backend developing (PHP + Drupal, MySQL), network testing and traffic analysis.
+      place: Seventest NTTS - St. Petersburg, Russia
+      resp: |
+        + Worked with a company providing network testing and traffic analysis services to major internet-based businesses.
+        + Explored different options for improving the website maintainability and setting up the environment, including different versions of PHP interpreter, Drupal web framework and MySQL database management system.
+        + Introducing Docker-based builds and improving build-time logging as well as providing comprehensive setup documentation helped developers get rid of multiple local-environment-related bugs and accelerated new team members onboarding process.
       start: Jun '21
       end: Aug '21
       profiles: ["frontend"]

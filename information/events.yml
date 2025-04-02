@@ -1,9 +1,9 @@
 events:
   items:
+
     - name: Academic exchange with HKUST
       date: Sept '24 - Jan '25
       description: |
         - Has taken part in academic exchange with Hong Kong University of Science and Technology school of science.
         - Curriculum included advanced topics of cybersecurity, internet protocols and machine learning.
-      profiles:
-        - all
+      profiles: ["all"]
