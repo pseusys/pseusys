@@ -5,7 +5,7 @@ work:
       place: Ansys - Lyon, France
       resp: |
         + Was part of a team responsible for data storage and transfer optimization between different parts of [AnsysDPF](https://dpf.docs.pyansys.com) infrastructure.
-        + Proposed and implemented in Python code generation design; internal data structures have been wrapped with consistent and schema-based generated user interfaces (in Python, C++ and C#).
+        + Proposed and implemented in Python code generation design; internal data structures have been wrapped with consistent and schema-based generated user interfaces (in Python, C++ and C\#).
         + As a result, codebase maintenance needs were reduced, codestyle and documentation coverage increased and further development sped up significantly.
       start: Feb '25
       end: Aug '25
