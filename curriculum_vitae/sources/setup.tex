@@ -35,7 +35,7 @@
 \pagestyle{empty}
 
 % indentation is zero
-\setlength{\parindent}{0mm}
+\setlength{\parindent}{0pt}
 
 % custom column right-align with fixed width, use like p{size} but via x{size}
 \newcolumntype{x}[1]{
@@ -63,3 +63,6 @@
 % to keep padding included in width calculations
 % can also be used for other boxes / environments
 \newcommand{\mpwidth}{\linewidth-\fboxsep-\fboxsep}
+
+% reset all the list spacings to 0
+\setlist{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}

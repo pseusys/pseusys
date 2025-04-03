@@ -9,8 +9,14 @@
             %{ title }%
         }{
             %{ place }%
-        }{
-            %{ result }%
         }
+        %{# result }%
+        {
+            %{ . }%
+        }
+        %{/ result }%
+        %{^ result }%
+        {}
+        %{/ result }%
     \vfill\null
 %{/ items }%

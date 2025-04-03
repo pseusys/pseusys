@@ -13,7 +13,7 @@ projects:
     profiles: ["backend", "devops"]
 
   - name: HogweedGo
-    tools: Python, Django, PostgreSQL, PostGIS, Docker, TensorFlow, Dart, Flutter
+    tools: Python, Django, PostgreSQL, Docker, TensorFlow, Dart, Flutter
     desc: |
       + Due to rapid climate changing, many plant species, originally native to warmer environments, are spreading further to the north; which can be dangerous to local habitats as well as unaware humans.
       + HogweedGo is a monitoring system, that allows volunteers to mark spotted alien plants on the map, attach their pictures and descriptions; after that, an expert team can process their findings and act appropriately.
@@ -69,7 +69,7 @@ projects:
     link: https://github.com/pseusys/MushOS
     start: 2019
     end: 2020
-    profiles: ["backend"]
+    profiles: ["backend", "devops"]
 
   - name: HoneStorage
     tools: Dart, Flutter

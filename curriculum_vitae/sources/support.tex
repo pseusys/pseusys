@@ -18,11 +18,12 @@
 % Renders a a CV section headline with a nice underline in main color.
 % param 1: section title
 \newcommand{\cvsection}[1] {
-	\vspace{14pt}
+	\vspace{5pt}
 	\cvtext{
 		\textbf{\LARGE{\textcolor{darkcol}{\uppercase{#1}}}} \\ [-4pt]
 		\textcolor{maincol}{ \rule{0.1\textwidth}{2pt} } \\
 	}
+	\vspace{-7pt}
 }
 
 % META SKILL
@@ -56,12 +57,11 @@
 	% we wrap this part in a parbox, so title and description are not separated on a pagebreak
 	% if you need more control on page breaks, remove the parbox
 	\parbox{\mpwidth}{
-
 		\begin{tabular*}{1\mpwidth}{p{0.72\mpwidth}  r}
 			\textcolor{black}{\textbf{#2}} & \colorbox{maincol}{\makebox[0.25\mpwidth]{\textcolor{white}{#1}}} \\
 		\ifx\relax#3\relax
 		\end{tabular*}
-		\vspace{4pt}
+		\vspace{3pt}
 		\else
 			\textcolor{maincol}{\textbf{#3}} & \\
 		\end{tabular*}
@@ -69,7 +69,7 @@
 	
 		\ifx\relax#4\relax
 		\else
-			\cvtext{#4}\\
+			\cvtext{#4}
 		\fi
 	}
 }
