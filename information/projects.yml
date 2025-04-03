@@ -13,11 +13,11 @@ projects:
     profiles: ["backend", "devops"]
 
   - name: HogweedGo
-    tools: Python, Django, PostgreSQL, Docker, TensorFlow, Dart, Flutter
+    tools: Python, Django, PostgreSQL, PostGIS, Docker, TF, Dart, Flutter
     desc: |
       + Due to rapid climate changing, many plant species, originally native to warmer environments, are spreading further to the north; which can be dangerous to local habitats as well as unaware humans.
       + HogweedGo is a monitoring system, that allows volunteers to mark spotted alien plants on the map, attach their pictures and descriptions; after that, an expert team can process their findings and act appropriately.
-      + System uses client-server architecture, with client written in Dart (using Flutter framework) and equipped with a neural network trained for plant species detection; server is written in Python (using Django framework).
+      + System uses client-server architecture, with client written in Dart (using Flutter framework) and equipped with a neural network trained for plant species detection (using TensorFlow); server is written in Python (using Django framework).
     link: https://github.com/pseusys/HogweedGo
     start: 2021
     end: 2022
