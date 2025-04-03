@@ -59,7 +59,7 @@ That is, a special rule is used for treating line breaks:
 #### Lambda functions
 
 Compiler makes use of [chevron](https://github.com/noahmorrison/chevron) lambdas and defines a few functions that are available during build time.
-The functions can accept one or more comma-separated arguments, that will be treated differently.
+The functions have names that end with parentheses and can accept one or more comma-separated arguments, that will be treated differently.
 Keep in mind that since the functions use `eval` to evaluate string representation of python code, they are terribly unsafe!
 Here are the function descriptions:
 

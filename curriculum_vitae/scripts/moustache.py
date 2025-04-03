@@ -50,7 +50,7 @@ class ProfileDict(Dict):
         return filtered
 
     def __getitem__(self, key: str):
-        if key in self.functions:
+        if key.endswith("()"):
             return self.functions[key]
         if ":" in key:
             final = key.index(":")
