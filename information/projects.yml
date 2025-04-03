@@ -3,25 +3,37 @@ projects:
 
   - name: SeasideVPN
     tools: Python, Go, Rust, Docker
-    desc: A distributed peer-to-peer VPN system, focused on being fast, secure and invisible to traffic analysis tools.
+    desc: |
+      + Traditionally, VPN protocols are more focused on hiding the transmitted data but not the fact that a VPN is used; a few existing solutions a very complex and still leak information through side channels.
+      + This project is a VPN system, designed specifically to address this issue: it has a simple design and uses as-secure-as-possible communication protocols.
+      + An example client and testing system is implemented in Python (relying heavily on Docker), VPN server is implemented in Go, a faster and safer client is implemented in Rust.
     link: https://github.com/pseusys/SeasideVPN
     start: 2023
     end: now
     profiles: ["backend", "devops"]
-  - name: HogWeedGo
+
+  - name: HogweedGo
     tools: Python, Django, PostgreSQL, PostGIS, Docker, TensorFlow, Dart, Flutter
-    desc: My thesis project, potentially dangerous plant species monitoring system (server and client with ML user assistant).
-    link: https://github.com/pseusys/HogWeedGo
+    desc: |
+      + Due to rapid climate changing, many plant species, originally native to warmer environments, are spreading further to the north; which can be dangerous to local habitats as well as unaware humans.
+      + HogweedGo is a monitoring system, that allows volunteers to mark spotted alien plants on the map, attach their pictures and descriptions; after that, an expert team can process their findings and act appropriately.
+      + System uses client-server architecture, with client written in Dart (using Flutter framework) and equipped with a neural network trained for plant species detection; server is written in Python (using Django framework).
+    link: https://github.com/pseusys/HogweedGo
     start: 2021
     end: 2022
     profiles: ["all"]
+
   - name: create-logger
     tools: Typescript, Pug, Less
-    desc: A web tool for creating colorful console logging modules (ASCII colors) in different programming languages.
+    desc: |
+      + It is very important sometimes to improve user experience of CLI-based programs by highlighting console output with different colors and styles; still, appropriate libraries do not exist for every platform and language.
+      + This project is a WYSIWYG text editor for terminal logs, capable of producing text formatted with [ANSI escape characters](https://en.wikipedia.org/wiki/ANSI_escape_code) as well as sample code implementation for enabling and printing it.
+      + It is a static website written from scratch (with no dependencies), using Typescript, Babel, Webpack, Pug, Less and Mocha; it is built by GitHub Actions and hosted on GitHub Pages.
     link: https://pseusys.github.io/create-logger
     start: 2020
     end: 2021
     profiles: ["frontend"]
+
   - name: alfonsine
     tools: Typescript, Pug, Less
     desc: A web tool for calculation celestial bodies positions according to [Alfonsine tables](https://en.wikipedia.org/wiki/Alfonsine_tables).
@@ -29,6 +41,7 @@ projects:
     start: 2020
     end: 2021
     profiles: ["none"]
+
   - name: Classic Dungeon
     tools: Kotlin Multiplatform, OpenGL
     desc: A multiplatform rogue-like game (inspired by watabou's Pixel Dungeon) written in Kotlin from scratch.
@@ -36,20 +49,28 @@ projects:
     start: 2021
     end: 2022
     profiles: ["none"]
+
   - name: Silentium Morse Messenger
     tools: Kotlin, Android Framework
-    desc: A server-less messenger based on sending and receiving messages encoded in Morse code, includes Morse code learning tool.
+    desc: |
+      + This project focuses on exploring different ways of user communication with their mobile devices, other than reading text from screen and typing text with keyboard.
+      + It consists of a messenger, that uses Morse code for information transfer; messages be sent by pressing one big button (a special keyboard layout is included) and received as text, vibrations, sound or flashlight.
+      + The messenger is written in Kotlin for Android platform, using Firebase Functions and Firebase Storage.
     link: https://github.com/pseusys/SilentiumMorseMessenger
     start: 2022
     end: 2022
     profiles: ["frontend"]
+
   - name: MushOS
-    tools: NASM, C, Makefile
-    desc: An UNIX-like OS, written from scratch.
+    tools: NASM, C, Makefile, CMake
+    desc: |
+      + Most of the modern operating systems have been designed long time ago and use common conventions for interoperability and portability; this project explores what could be done differently in OS design and what consequences it would have.
+      + The project consists of an 32-bit OS, written from scratch starting from the bootloader and assembly code; it uses NASM for assembly code, C for kernel, Makefile and CMake for building and running, also relying on CTest and Doxygen.
     link: https://github.com/pseusys/MushOS
     start: 2019
     end: 2020
     profiles: ["backend"]
+
   - name: HoneStorage
     tools: Dart, Flutter
     desc: An offline secure password storage utility.
