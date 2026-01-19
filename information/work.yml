@@ -1,5 +1,12 @@
 work:
   items:
+    - job: Research and Development Engineer
+      place: Synopsys - Lyon, France
+      resp: Reworking simulation framework data representation based on Flatbuffers format and code generation.
+      start: Sept '25
+      end: Present
+      profiles:
+        - all
     - job: Backend Developing Intern
       place: Ansys - Lyon, France
       resp: Enhancing simulation framework by introducing code generation.
