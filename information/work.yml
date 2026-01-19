@@ -1,6 +1,16 @@
 work:
   items:
 
+    - job: Research and Development Engineer
+      place: Synopsys - Lyon, France
+      resp: |
+        + Changed the physical simulation data representation and its' API, focusing on processing and transmission speed.
+        + Enhanced user library by providing copy-less and allocation-less access to raw FlatBuffers-based data using generated code in C++, Python and C\#.
+        + User interface became more friendly, efficient and more consistent with the well-defined schemas, used as the source of truth.
+      start: Sept '25
+      end: Present
+      profiles: ["all"]
+
     - job: Backend Developing Intern
       place: Ansys - Lyon, France
       resp: |
