@@ -1,0 +1,87 @@
+publications:
+  items:
+    - title: "TYPHOON: Transfer Your Packets Hidden Over Observed Networks"
+      type: paper
+      status: in preparation
+      year: 2026
+      authors:
+        - Aleksandr Sergeev
+        # TODO(typhoon-coauthors): add any co-authors if applicable
+      venue: "TODO(typhoon-venue): target conference or journal (e.g., USENIX Security, IEEE S&P, NDSS, PoPETs)"
+      abstract: >-
+        Specifies TYPHOON, a UDP-based transport-layer protocol designed to make traffic
+        identification impractical. All packets are fully encrypted with no cleartext fields;
+        decoy traffic and fake protocol headers mimic generic network behavior. The protocol
+        uses a session manager / flow manager architecture, supports multiple proxy endpoints,
+        and offers post-quantum readiness via Classic McEliece KEM alongside XChaCha20-Poly1305
+        and AES-GCM-256 symmetric modes. Includes a Rust reference implementation.
+      link: https://github.com/pseusys/TYPHOON
+      profiles:
+        - all
+
+  reports:
+    - title: Comparison of Neural Network and Algorithmic Based Person Detectors for LiDAR Data
+      type: technical report
+      status: completed
+      year: 2023
+      authors:
+        - Aleksandr Sergeev
+      supervisor: Olivier Aycard
+      institution: Grenoble Computer Science Laboratory (LIG), UGA
+      abstract: >-
+        Compared two person detection methods for 2D LiDAR data: a heuristic cluster-based
+        algorithmic detector and a deep learning DROW detector based on 1D convolutional
+        architecture. Developed the Follow-the-DROW (FTD) library, ROS package, and Docker
+        image for detector comparison and deployment on the RobAIR platform. Identified
+        significant annotation quality issues in the DROW dataset affecting evaluation reliability.
+      link: https://github.com/pseusys/follow_the_drow
+      # TODO(ftd-more): add more detail once current repo contents are reviewed:
+      #   - exact precision-recall numbers (DROW AUC=71.1% vs algorithmic AUC=0.0%)
+      #   - key finding: dataset annotation errors made fair comparison infeasible
+      #   - proposed solutions: Annotator node for manual re-annotation, C++ pytorch for speed
+      #   - any related coursework from 'current' repo that fed into this project
+      profiles:
+        - all
+
+  theses:
+    - title: Simulation Framework Code Generation
+      degree: Master of Science
+      university: Université Grenoble Alpes / Grenoble INP - Ensimag
+      year: 2025
+      supervisor: Camille Bellot
+      company: Ansys (acquired by Synopsys)
+      abstract: >-
+        Designed and implemented a schema-driven code generation system for Ansys's simulation
+        framework (DPF), replacing manually maintained client libraries in Python, C++, and C#
+        with auto-generated code from a single schema definition. Evaluated multiple schema
+        technologies (FlatBuffers, Protobuf, Cap'n Proto, etc.), designed a front-end/back-end
+        generation pipeline with intermediate representation, and integrated the generator
+        into existing CMake and Poetry build systems.
+      # TODO(masters-academic-supervisor): was there also an academic supervisor at UGA/Ensimag
+      #   in addition to Camille Bellot at Ansys? If so, add their name here.
+      profiles:
+        - all
+    - title: "TODO(bsc-title): exact bachelor's thesis title from the report cover page"
+      degree: Bachelor of Technology
+      university: St. Petersburg Electrotechnical University (ETU)
+      year: 2022
+      supervisor: "TODO(bsc-supervisor): supervisor name from the report"
+      # TODO(bsc-department): which department/chair at ETU? (e.g., MOEVM)
+      abstract: >-
+        Developed a monitoring system for Sosnowsky's hogweed (Heracleum sosnowskyi),
+        an invasive phototoxic plant species. The system combines a Django/PostGIS server
+        backend, a Flutter mobile client for field reporting, and a TensorFlow-based ML
+        image classification assistant for species identification.
+      # TODO(bsc-abstract): refine abstract once bachelor's report is reviewed:
+      #   - what ML model architecture was used? (CNN, transfer learning, etc.)
+      #   - what dataset was used for training?
+      #   - what accuracy/metrics were achieved?
+      #   - was there a GIS/mapping component for hogweed location tracking?
+      link: https://github.com/pseusys/HogWeedGo
+      profiles:
+        - all
+
+  # TODO(hogweedgo-related-work): there is a related dataset by Anton Alekseev
+  #   (hogweed-ground-level-view, Zenodo DOI: 10.5281/zenodo.5233380) and an IEEE paper
+  #   on UAV-based hogweed detection. Were these referenced in your thesis? If so,
+  #   note the relationship here for when you write emails to professors.

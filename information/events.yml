@@ -1,9 +1,17 @@
 events:
   items:
-
     - name: Academic exchange with HKUST
       date: Sept '24 - Jan '25
-      description: |
-        - Took part in academic exchange with the Hong Kong University of Science and Technology School of Science.
-        - Curriculum included advanced topics in cybersecurity, internet protocols, and machine learning.
-      profiles: ["none"]
+      description: Semester-long academic exchange at Hong Kong University of Science and Technology, School of Science. Completed coursework including ML-based food recognition project.
+      profiles:
+        - all
+    - name: Scientific and technical seminar (ETU)
+      date: 2022
+      description: Presented bachelor's thesis project (HogWeedGo) at seminar conducted by ETU MOEVM department.
+      profiles:
+        - all
+    - name: BEAC Youth Model Conference
+      date: 2019
+      description: Participated in BEAC Youth Model Conference with a presentation.
+      profiles:
+        - none

@@ -1,0 +1,103 @@
+# Supplementary information (not rendered on CV, used for applications and emails)
+
+supplementary:
+  coursework_repo: https://github.com/pseusys/current
+  # TODO(current-repo): review this repo and extract:
+  #   - list of courses from ETU (bachelor's) — especially any related to networks,
+  #     distributed systems, OS, compilers, or ML
+  #   - list of courses from Ensimag (master's) — especially any related to
+  #     networking, security, formal methods, or distributed computing
+  #   - list of courses from HKUST (exchange) — beyond COMP4471
+  #   - any notable course projects that could be mentioned in applications
+  #   - any grades or rankings worth highlighting
+
+  personal_blog: https://pseusys.hashnode.dev/
+  # TODO(blog-posts): could not access blog (403). List blog post topics here for
+  #   reference in applications. Are any posts related to networking, crypto, or
+  #   protocol design? Those would be worth mentioning to professors.
+
+  github_profile: https://github.com/pseusys
+  linkedin: https://www.linkedin.com/in/pseusys/
+
+  deeppavlov_details:
+    organization: DeepPavlov.ai (MIPT Neural Networks and Deep Learning Lab)
+    role: Software Engineer
+    period: May 2022 - Jan 2025
+    description: >-
+      Contributed to Chatsky open-source conversational AI framework. Worked on neural network
+      model wrappers, CI/CD pipelines, and documentation. The framework relies heavily on
+      asynchronous and multithreaded architecture for efficient distributed LLM request processing.
+    repos:
+      - https://github.com/deeppavlov/chatsky
+      - https://github.com/deeppavlov/DeepPavlov
+    # TODO(deeppavlov-contributions): list your specific merged PRs or features.
+    #   Concrete contribution numbers (e.g., "authored 47 PRs", "added feature X")
+    #   are very useful in applications.
+
+  hkust_exchange_details:
+    university: Hong Kong University of Science and Technology
+    school: School of Science
+    period: Sept 2024 - Jan 2025
+    courses_taken:
+      - "COMP4471 (Deep Learning in Computer Vision) - imagine_food project"
+      # TODO(hkust-courses): list all other courses taken at HKUST
+    professors_met: "TODO(hkust-professors): any professors you connected with at HKUST"
+    # TODO(hkust-experience): any labs visited, seminars attended, research groups
+    #   you interacted with? This is gold for Asian university applications.
+    projects:
+      - name: imagine_food
+        description: >-
+          ML-based food recognition/classification, COMP4471 final project.
+          Uses CVPR-template report, Poetry for dependency management, Jupyter notebooks.
+        link: https://github.com/pseusys/imagine_food
+
+  hogweedgo_details:
+    # TODO(hogweedgo-report): once bachelor's report is shared, extract:
+    #   - exact thesis title (from cover page)
+    #   - supervisor name (from cover page)
+    #   - ML model architecture and training details
+    #   - dataset: source, size, annotation method
+    #   - classification metrics (accuracy, F1, precision, recall)
+    #   - GIS/mapping features
+    #   - any connection to the broader hogweed detection research ecosystem
+    #     (Alekseev's dataset, IEEE UAV paper, etc.)
+    link: https://github.com/pseusys/HogWeedGo
+    report: https://github.com/pseusys/HogWeedGo/releases/download/v0.0.1-report/report.pdf
+
+  follow_the_drow_details:
+    # TODO(ftd-more): once 'current' repo contents are reviewed, add:
+    #   - any related coursework that fed into this project
+    #   - any follow-up work done after the internship ended
+    #   - whether the FTD library/Docker image was adopted by the lab
+    #   - Olivier Aycard's exact academic title for reference letters
+    link: https://github.com/pseusys/follow_the_drow
+    report_in_current_repo: true
+
+  typhoon_paper_details:
+    full_name: "TYPHOON: Transfer Your Packets Hidden Over Observed Networks"
+    status: Drafting / early writing
+    key_contributions:
+      - Full protocol specification (800+ lines of documentation)
+      - Rust reference implementation with multiple crypto feature flags
+      - Session manager / flow manager architecture for traffic obfuscation
+      - Decoy packet generation (noisy, sparse, smooth modes)
+      - Fake header mimicry to simulate generic protocol behavior
+      - Post-quantum readiness via Classic McEliece KEM
+    crypto_primitives:
+      - XChaCha20-Poly1305 (software mode)
+      - AES-GCM-256 (hardware mode with AES-NI)
+      - Classic McEliece (post-quantum KEM)
+      - X25519 (key exchange)
+      - Ed25519 (signatures)
+      - BLAKE3 (hashing)
+    # TODO(typhoon-evaluation): does the paper include any evaluation?
+    #   (e.g., benchmarks, traffic analysis resistance tests, throughput measurements)
+    #   If not yet, what evaluation is planned?
+
+  target_universities: "TODO(target-unis): list of target PhD programs and professors"
+  # TODO(target-unis-detail): for each target, include:
+  #   - university name and department
+  #   - professor name and research area
+  #   - why this professor's work aligns with your interests
+  #   - application deadline
+  #   - any specific requirements (GRE, research proposal, etc.)

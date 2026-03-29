@@ -1,25 +1,55 @@
 work:
   items:
 
+    # --- Synopsys ---
     - job: Research and Development Engineer
-      place: Synopsys - Lyon, France
+      place: Synopsys (formerly Ansys) - Lyon, France
+      resp: Continuing development of schema-driven code generation system for the DPF simulation framework. The system follows traditional compiler architecture with front-end parsing, intermediate representation, and back-end code emission targeting FlatBuffers format.
+      start: Sept '25
+      end: Present
+      profiles:
+        - research
+
+    - job: Research and Development Engineer
+      place: Synopsys (formerly Ansys) - Lyon, France
       resp: |
-        + Changed the physical simulation data representation and its' API, focusing on processing and transmission speed.
+        + Changed the physical simulation data representation and its API, focusing on processing and transmission speed.
         + Enhanced user library by providing copy-less and allocation-less access to raw FlatBuffers-based data using generated code in C++, Python and C\#.
         + User interface became more friendly, efficient and more consistent with the well-defined schemas, used as the source of truth.
       start: Sept '25
       end: Present
-      profiles: ["all"]
+      profiles:
+        - all
+
+    # --- Ansys ---
+    - job: Backend Developing Intern
+      place: Ansys (acquired by Synopsys) - Lyon, France
+      resp: "Master's thesis internship: designed and implemented a multi-language code generation pipeline for the DPF simulation framework, replacing manually maintained client libraries in Python, C++, and C\\# with auto-generated code from schema definitions."
+      start: Feb '25
+      end: Aug '25
+      profiles:
+        - research
 
     - job: Backend Developing Intern
-      place: Ansys - Lyon, France
+      place: Ansys (acquired by Synopsys) - Lyon, France
       resp: |
         + Was part of a team responsible for data storage and transfer optimization between different parts of [AnsysDPF](https://dpf.docs.pyansys.com) infrastructure.
         + Proposed and implemented in Python a code generation design; internal data structures have been wrapped with consistent and schema-based generated user interfaces (in Python, C++ and C\#).
         + As a result, codebase maintenance needs were reduced, code style and documentation coverage increased, and further development sped up significantly.
       start: Feb '25
       end: Aug '25
-      profiles: ["backend", "frontend"]
+      profiles:
+        - backend
+        - frontend
+
+    # --- Amadeus ---
+    - job: Full Stack Intern
+      place: Amadeus - Nice, France
+      resp: Developed mutation testing tools for a large-scale C++ project, involving abstract syntax tree construction, partial code compilation, and code mutation. Also experimented with AI-assisted testing approaches.
+      start: Feb '24
+      end: Aug '24
+      profiles:
+        - research
 
     - job: Full Stack Intern
       place: Amadeus - Nice, France
@@ -29,20 +59,41 @@ work:
         + Periodically running the framework helped improve test coverage and reduce the number of human-factor bugs, like typos and misspellings (still, it takes a considerable amount of time).
       start: Feb '24
       end: Aug '24
-      profiles: ["devops"]
+      profiles:
+        - devops
 
-    - job: Robotics Intern
-      place: Grenoble Computer Science Laboratory - LIGLAB
+    # --- LIGLAB ---
+    - job: Research Intern
+      place: Grenoble Computer Science Laboratory (LIG), UGA
+      resp: Compared neural network (DROW) and algorithmic person detectors for 2D LiDAR data on the RobAIR platform. Developed the FTD comparison library, ROS package, and Docker deployment image.
+      start: Jun '23
+      end: Aug '23
+      profiles:
+        - research
+
+    - job: Research Intern
+      place: Grenoble Computer Science Laboratory (LIG), UGA
       resp: |
         + Explored the possibility of replacing the algorithm-based navigation mechanism used in laboratory robots equipped with 2D LiDARs with a machine-learning-based one.
         + Developed C++ and Python interfaces for RobotOS, allowing different navigation algorithms to be integrated, and compared them both physically and in simulation.
         + Even though trained neural networks didn't outperform existing algorithms (primarily due to annotation issues in LiDAR records used for training), the developed interfaces are still used in further research.
       start: Jun '23
       end: Aug '23
-      profiles: ["backend", "devops"]
+      profiles:
+        - backend
+        - devops
+
+    # --- DeepPavlov ---
+    - job: Software Engineer
+      place: DeepPavlov.ai (MIPT) - Remote, Part-Time
+      resp: Software engineer on the Chatsky open-source conversational AI framework. Developed neural network model wrappers, CI/CD pipelines, and documentation. The framework relies heavily on asynchronous and multithreaded architecture for efficient distributed LLM request processing.
+      start: May '22
+      end: Jan '25
+      profiles:
+        - research
 
     - job: Software Engineer
-      place: DeepPavlov.ai - Remote, Part-Time
+      place: DeepPavlov.ai (MIPT) - Remote, Part-Time
       resp: |
         + Took part in [chatsky](https://github.com/deeppavlov/chatsky) dialog bot creation framework development.
         + Was responsible for both basic framework functionality implementation (in Python), asynchronous database integrations (Redis, MongoDB, MySQL, SQLite, PostgreSQL), and static documentation website generation (using Sphinx, JavaScript, and CSS).
@@ -50,8 +101,10 @@ work:
         + All of that expanded the framework core use cases, improved performance, increased test coverage, made documentation easily available, and contributed to both better developer and user experience.
       start: May '22
       end: Jan '25
-      profiles: ["all"]
+      profiles:
+        - all
 
+    # --- Seventest ---
     - job: Full Stack Intern
       place: Seventest NTTS - St. Petersburg, Russia
       resp: |
@@ -60,4 +113,5 @@ work:
         + Introducing Docker-based builds and improving build-time logging, as well as providing comprehensive setup documentation, helped developers eliminate multiple local-environment-related bugs and accelerated the new team members' onboarding process.
       start: Jun '21
       end: Aug '21
-      profiles: ["frontend"]
+      profiles:
+        - none

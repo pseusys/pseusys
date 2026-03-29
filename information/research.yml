@@ -1,0 +1,24 @@
+research:
+  statement: >-
+    My research interests lie at the intersection of network protocol design, distributed systems,
+    and applied cryptography. I am particularly interested in developing communication protocols
+    that resist traffic analysis and censorship, designing decentralized architectures for secure
+    peer-to-peer communication, and exploring hybrid transport systems that bridge different
+    network technologies. My work on the TYPHOON protocol — a UDP-based transport-layer protocol
+    that eliminates all cleartext fields, generates decoy traffic, and mimics generic protocol
+    behavior to make deep packet inspection economically impractical — exemplifies this focus.
+    My parallel work on Airwire, a hybrid messenger that seamlessly switches between web API and
+    SMS/MMS transport with end-to-end encryption, demonstrates my interest in practical secure
+    communication across heterogeneous networks. I aim to contribute to making private, resilient
+    communication systems more accessible through rigorous protocol specification and formal analysis.
+  keywords:
+    - Network protocol design
+    - Distributed systems
+    - Peer-to-peer networks
+    - Applied cryptography
+    - Traffic analysis resistance
+    - Censorship circumvention
+    - Deep packet inspection evasion
+    - Secure messaging
+    - Post-quantum cryptography
+    - Hybrid transport systems

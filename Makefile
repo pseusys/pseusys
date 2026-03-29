@@ -6,7 +6,7 @@ SHELL = /bin/bash
 
 PATH := venv/bin:$(PATH)
 
-PROFILES = frontend backend devops all
+PROFILES = frontend backend devops all research
 PROFILE = all
 
 

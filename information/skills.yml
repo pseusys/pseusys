@@ -1,38 +1,36 @@
 skills:
+  total: 7
   items:
   - name: Git, Linux
-    years: 3
-    profiles: ["all"]
-  - name: Kotlin, Java, Android
-    years: 2
-    profiles: ["all"]
-  - name: Python
-    years: 2
-    profiles: ["backend", "devops"]
-  - name: GitHub Actions, Make, Gradle, Bash
-    years: 2
-    profiles: ["backend", "devops"]
+    years: 7
+    profiles: ["frontend", "backend", "devops", "research"]
   - name: C, C++, Qt
-    years: 2
-    profiles: ["backend", "devops"]
-  - name: Dart, Flutter
-    years: 1
-    profiles: ["frontend", "devops"]
-  - name: Docker, Compose
-    years: 1
-    profiles: ["backend", "devops"]
-  - name: PostgreSQL, MongoDB
-    years: 1
-    profiles: ["backend", "devops"]
+    years: 6
+    profiles: ["backend", "devops", "research"]
+  - name: Python
+    years: 5
+    profiles: ["backend", "devops", "research"]
+  - name: Kotlin, Java, Android
+    years: 5
+    profiles: ["backend", "devops", "research"]
   - name: JS, TS, HTML, CSS
-    years: 1
-    profiles: ["frontend", "devops"]
+    years: 5
+    profiles: ["frontend", "devops", "research"]
+  - name: Docker, Compose, GitHub Actions, Make, Gradle, Bash
+    years: 5
+    profiles: ["frontend", "backend", "devops", "research"]
+  - name: ML, Deep Learning
+    years: 4
+    profiles: ["backend", "devops", "research"]
+  - name: PostgreSQL, MongoDB
+    years: 4
+    profiles: ["backend", "devops", "research"]
+  - name: LaTeX
+    years: 4
+    profiles: ["research"]
+  - name: Dart, Flutter
+    years: 2
+    profiles: ["frontend", "research"]
   - name: OpenGL
     years: 1
-    profiles: ["frontend"]
-  - name: ML, Neural Networks
-    years: 1
-    profiles: ["backend"]
-  - name: LaTeX
-    years: 1
-    profiles: ["none"]
+    profiles: ["frontend", "research"]

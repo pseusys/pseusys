@@ -1,38 +1,147 @@
 projects:
   items:
+  - name: TYPHOON
+    tools: Rust, UDP, XChaCha20-Poly1305, AES-GCM-256, Classic McEliece, X25519, Ed25519, BLAKE3
+    desc: >-
+      A novel transport-layer protocol specification and Rust reference implementation designed to resist
+      deep packet inspection. Features fully encrypted packets with no cleartext headers, decoy traffic
+      generation, fake protocol header mimicry, and multiple cryptographic modes. Paper in preparation.
+    link: https://github.com/pseusys/TYPHOON
+    start: 2024
+    end: Present
+    profiles:
+      - all
+      - research
+
+  - name: Airwire
+    tools: Protobuf, X25519, XChaCha20-Poly1305, Firebase, SMS/MMS
+    # TODO(airwire-tools): add the implementation language(s) — what is the server
+    #   written in? What is the client written in? (e.g., Python, Kotlin, Go, etc.)
+    desc: >-
+      A hybrid messaging application that switches between web API and SMS/MMS transport.
+      Server acts as a stateless relay with no message persistence. Features asynchronous
+      encryption for SMS mode, Markov-chain and steganographic encoding for MMS, and
+      chunked message delivery over 160-byte SMS constraints.
+    link: https://github.com/pseusys/airwire
+    start: 2025
+    end: Present
+    profiles:
+      - all
+      - research
 
   - name: SeasideVPN
-    tools: Python, Go, Rust, Docker
-    desc: |
-      + Traditionally, VPN protocols are more focused on hiding the transmitted data but not the fact that a VPN is used; a few existing solutions are very complex and still leak information through side channels.
-      + This project is a VPN system, designed specifically to address this issue: it has a simple design and uses as-secure-as-possible communication protocols.
-      + An example client and testing system are implemented in Python (relying heavily on Docker), the VPN server is implemented in Go, and a faster and safer client is implemented in Rust.
+    tools: Go, Rust, Python, gRPC, Protobuf, Docker
+    desc: >-
+      A P2P VPN distributed system featuring the TYPHOON protocol, certificate-based authentication,
+      traffic obfuscation, and TRON blockchain integration for decentralized provider registration.
     link: https://github.com/pseusys/SeasideVPN
-    start: 2023
-    end: now
-    profiles: ["backend", "devops"]
+    start: 2022
+    end: 2024
+    profiles:
+      - all
+      - research
 
-  - name: HogweedGo
-    tools: Python, Django, PostgreSQL, PostGIS, Docker, TF, Dart, Flutter
-    desc: |
-      + Due to rapid climate change, many plant species, originally native to warmer environments, are spreading further to the north; this can be dangerous to local habitats as well as unaware humans.
-      + HogweedGo is a monitoring system that allows volunteers to mark spotted alien plants on the map, attach their pictures and descriptions; after that, an expert team can process their findings and act appropriately.
-      + The system uses a client-server architecture, with the client written in Dart (using the Flutter framework) and equipped with a neural network trained for plant species detection (using TensorFlow); the server is written in Python (using the Django framework).
-    link: https://github.com/pseusys/HogweedGo
+  - name: HogWeedGo
+    tools: Python, Django, PostgreSQL, PostGIS, Docker, TensorFlow, Dart, Flutter
+    desc: >-
+      Bachelor's thesis: a monitoring system for Sosnowsky's hogweed, combining a
+      Django/PostGIS server, Flutter mobile client, and TensorFlow ML classifier.
+    # TODO(hogweedgo-desc): once bachelor's report is reviewed, enrich description with:
+    #   - specific ML model type (CNN? transfer learning? which base model?)
+    #   - classification accuracy / metrics achieved
+    #   - dataset details (self-collected? size? annotation method?)
+    #   - GIS features (hogweed location mapping, heatmaps, etc.)
+    #   - any user-facing features beyond classification (reporting workflow, alerts, etc.)
+    link: https://github.com/pseusys/HogWeedGo
     start: 2021
     end: 2022
-    profiles: ["all"]
+    profiles:
+      - frontend
+      - backend
+      - devops
+      - research
+
+  - name: imagine\_food
+    tools: Python, Poetry, Jupyter, LaTeX
+    # TODO(imagine-food-tools): add ML framework used (PyTorch? TensorFlow?)
+    #   and model architecture (ResNet? Vision Transformer? etc.)
+    desc: >-
+      COMP4471 final project at HKUST: ML-based food recognition and classification.
+      Includes training notebooks and a CVPR-template research report.
+    # TODO(imagine-food-desc): add more detail:
+    #   - what dataset was used?
+    #   - what accuracy was achieved?
+    #   - was there a novel contribution or just reproduction?
+    link: https://github.com/pseusys/imagine_food
+    start: 2024
+    end: 2025
+    profiles:
+      - all
+      - research
+
+  - name: Follow the DROW
+    tools: Python, C++, PyTorch, ROS, Docker, pybind11
+    desc: >-
+      LIGLAB research internship: comparison framework for neural network (DROW) and
+      algorithmic person detectors on 2D LiDAR data. Includes FTD library, ROS package,
+      and Docker deployment for the RobAIR platform.
+    # TODO(ftd-desc): enrich from current repo and report:
+    #   - mention key finding: DROW dataset annotation quality issues
+    #   - mention Annotator node contribution for dataset re-annotation
+    #   - mention person tracker node with multiple tracking policies
+    #   - any follow-up work or improvements made after the internship?
+    link: https://github.com/pseusys/follow_the_drow
+    start: 2023
+    end: 2023
+    profiles:
+      - all
+      - research
+
+  - name: MushOS
+    tools: NASM, C, CMake, QEMU
+    desc: >-
+      A UNIX-like OS prototype written from scratch, featuring a custom bootloader,
+      kernel, drivers, and a modular stdlib replacement (MushLib).
+    link: https://github.com/pseusys/MushOS
+    start: 2019
+    end: 2020
+    profiles:
+      - backend
+      - devops
+      - research
+
+  - name: Classic Dungeon
+    tools: Kotlin Multiplatform, OpenGL
+    desc: A multiplatform rogue-like game with custom OpenGL rendering engine, written from scratch.
+    # TODO(classicdungeon-desc): could not access repo README — any notable
+    #   technical details worth adding? (e.g., custom ECS, procedural generation, etc.)
+    link: https://github.com/pseusys/ClassicDungeon
+    start: 2021
+    end: 2022
+    profiles:
+      - backend
+      - devops
+      - research
+
+  - name: Silentium Morse Messenger
+    tools: Kotlin, Android Framework
+    desc: A server-less messenger using Morse code encoding, with a built-in learning tool.
+    # TODO(silentium-desc): could not access repo README — any notable technical
+    #   details? (e.g., how does server-less message delivery work? Bluetooth? NFC? audio?)
+    link: https://github.com/pseusys/SilentiumMorseMessenger
+    start: 2022
+    end: 2022
+    profiles:
+      - frontend
 
   - name: create-logger
     tools: Typescript, Pug, Less
-    desc: |
-      + It is very important sometimes to improve the user experience of CLI-based programs by highlighting console output with different colors and styles; still, appropriate libraries do not exist for every platform and language.
-      + This project is a WYSIWYG text editor for terminal logs, capable of producing text formatted with [ANSI escape characters](https://en.wikipedia.org/wiki/ANSI_escape_code) as well as sample code implementation for enabling and printing it.
-      + It is a static website written from scratch (with no dependencies), using Typescript, Babel, Webpack, Pug, Less, and Mocha; it is built by GitHub Actions and hosted on GitHub Pages.
+    desc: A web tool for creating colorful console logging modules in different programming languages.
     link: https://pseusys.github.io/create-logger
     start: 2020
     end: 2021
-    profiles: ["frontend"]
+    profiles:
+      - frontend
 
   - name: alfonsine
     tools: Typescript, Pug, Less
@@ -40,36 +149,8 @@ projects:
     link: https://github.com/pseusys/alfonsine
     start: 2020
     end: 2021
-    profiles: ["none"]
-
-  - name: Classic Dungeon
-    tools: Kotlin Multiplatform, OpenGL
-    desc: A multiplatform rogue-like game (inspired by Watabou's Pixel Dungeon) written in Kotlin from scratch.
-    link: https://github.com/pseusys/ClassicDungeon
-    start: 2021
-    end: 2022
-    profiles: ["none"]
-
-  - name: Silentium Morse Messenger
-    tools: Kotlin, Android Framework
-    desc: |
-      + This project focuses on exploring different ways of user communication with their mobile devices, other than reading text from the screen and typing text with a keyboard.
-      + It consists of a messenger that uses Morse code for information transfer; messages can be sent by pressing one big button (a special keyboard layout is included) and received as text, vibrations, sound, or flashlight.
-      + The messenger is written in Kotlin for the Android platform, using Firebase Functions and Firebase Storage.
-    link: https://github.com/pseusys/SilentiumMorseMessenger
-    start: 2022
-    end: 2022
-    profiles: ["frontend"]
-
-  - name: MushOS
-    tools: NASM, C, Makefile, CMake
-    desc: |
-      + Most of the modern operating systems have been designed a long time ago and use common conventions for interoperability and portability; this project explores what could be done differently in OS design and what consequences it would have.
-      + The project consists of a 32-bit OS, written from scratch starting from the bootloader and assembly code; it uses NASM for assembly code, C for the kernel, Makefile and CMake for building and running, and also relies on CTest and Doxygen.
-    link: https://github.com/pseusys/MushOS
-    start: 2019
-    end: 2020
-    profiles: ["backend", "devops"]
+    profiles:
+      - none
 
   - name: HoneStorage
     tools: Dart, Flutter
@@ -77,4 +158,11 @@ projects:
     link: https://github.com/pseusys/HoneStorage
     start: 2023
     end: 2023
-    profiles: ["none"]
+    profiles:
+      - none
+
+  # TODO(current-repo): add coursework compilation project once reviewed:
+  #   - link: https://github.com/pseusys/current
+  #   - which courses from ETU and Ensimag are included?
+  #   - are there any standalone projects within it worth listing separately?
+  #   - any coursework related to networking, distributed systems, or crypto?

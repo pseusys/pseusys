@@ -1,0 +1,39 @@
+references:
+  items:
+    - name: Camille Bellot
+      title: "TODO(bellot-title): job title at Ansys/Synopsys"
+      institution: Ansys / Synopsys - Lyon, France
+      email: "TODO(bellot-email): professional email"
+      relationship: Master's internship supervisor; supervised code generation project for simulation framework
+      # TODO(bellot-academic): can Camille write a recommendation letter?
+      #   If not, is there an academic supervisor at UGA who can?
+      profiles:
+        - all
+    - name: Olivier Aycard
+      title: "TODO(aycard-title): title at LIG / UGA (e.g., Maître de Conférences)"
+      institution: Grenoble Computer Science Laboratory (LIG), Université Grenoble Alpes
+      email: "TODO(aycard-email): professional email (try olivier.aycard@univ-grenoble-alpes.fr)"
+      relationship: Research internship supervisor; supervised LiDAR person detection comparison project (summer 2023)
+      profiles:
+        - all
+    - name: "TODO(bsc-supervisor): bachelor's thesis supervisor name"
+      title: "TODO(bsc-supervisor-title): title at ETU"
+      institution: St. Petersburg Electrotechnical University (ETU)
+      email: "TODO(bsc-supervisor-email): email"
+      relationship: Bachelor's thesis supervisor (HogWeedGo project)
+      # TODO(bsc-supervisor-available): is this person reachable and willing to write a letter?
+      #   Given geopolitical situation, consider whether a Russian reference is practical.
+      profiles:
+        - all
+    - name: "TODO(deeppavlov-ref): name of your manager or lead at DeepPavlov"
+      title: "TODO(deeppavlov-ref-title): title"
+      institution: DeepPavlov.ai (MIPT)
+      email: "TODO(deeppavlov-ref-email): email"
+      relationship: Engineering manager during software engineering role (May 2022 - Jan 2025)
+      profiles:
+        - all
+
+  # TODO(hkust-ref): did you build a relationship with any HKUST professor during
+  #   your exchange? A reference from an Asian university would be especially valuable
+  #   for PhD applications to other Asian universities.
+  # TODO(additional-refs): consider whether Amadeus supervisor could also serve as a reference

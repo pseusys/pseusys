@@ -7,3 +7,4 @@ class CVProfile(StrEnum):
     BACKEND = "backend"
     DEVOPS = "devops"
     ALL = "all"
+    RESEARCH = "research"
