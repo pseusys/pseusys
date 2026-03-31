@@ -41,8 +41,28 @@ build-all-cv:
 	done
 .PHONY: build-all-cv
 
+website/node_modules:
+	@ # Install website npm dependencies
+	cd website
+	npm install
+
+build-website: website/node_modules
+	@ # Build website static files
+	cd website
+	npm run build
+.PHONY: build-website
+
+dev-website: website/node_modules
+	@ # Start website development server
+	cd website
+	npm run dev
+.PHONY: dev-website
+
 clean:
 	rm -rf venv
 	rm -rf curriculum_vitae/build
 	rm -rf curriculum_vitae/out
 	rm -rf **/__pycache__
+	rm -rf website/.next
+	rm -rf website/out
+	rm -rf website/node_modules

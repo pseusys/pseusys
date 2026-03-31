@@ -6,3 +6,8 @@ assets
 
 curriculum_vitae/build
 curriculum_vitae/pdf
+
+website/.next/
+website/out/
+website/node_modules/
+website/package-lock.json

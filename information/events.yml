@@ -12,6 +12,16 @@ events:
         \href{https://etu.ru/assets/files/Faculty-FKTI/MO/sbornik-2022-moevm.pdf}{Published in proceedings}, pp. 12--15.
       profiles:
         - all
+    - name: Software registration — FIPS Russia
+      date: 2022
+      description: >-
+        Co-authored software registered with the Federal Service for Intellectual Property (Rospatent).
+        The program automates formal checking of graduation thesis presentations against a set of structural criteria.
+        \href{https://new.fips.ru/registers-doc-view/fips_servlet?DB=EVM&DocNumber=2022614398&TypeFile=html}{Certificate No.\ 2022614398}, SPbGETU ``LETI''.
+      profiles:
+        - all
+        - research
+
     - name: BEAC Youth Model Conference
       date: 2019
       description: Participated in BEAC Youth Model Conference with a presentation.
