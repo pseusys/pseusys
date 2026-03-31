@@ -16,6 +16,10 @@ _LATEX_BOLD = r"\\textbf{\g<content>}"
 _MD_LINK = compile(r"\[(?P<text>.*?)\]\((?P<url>.*?)\)")
 _LATEX_LINK = r"\\href{\g<url>}{\g<text>}"
 
+_UNICODE_SUBS = [
+    (compile(r"×"), r"$\\times$"),
+]
+
 
 def _create_latex_list(items: List[str]) -> str:
     list_items = " ".join(f"\\item {item}" for item in items)
@@ -60,12 +64,14 @@ def _md_to_latex(object: _T) -> _T:
         object = _md_process_lines(object)
         object = sub(_MD_BOLD, _LATEX_BOLD, object)
         object = sub(_MD_LINK, _LATEX_LINK, object)
+        for pattern, replacement in _UNICODE_SUBS:
+            object = sub(pattern, replacement, object)
     return object
 
 
 def unyaml(info_root: Path) -> Dict:
     information = dict()
     for info in info_root.glob("*.yml"):
-        with open(info) as file:
+        with open(info, encoding="utf-8") as file:
             information |= safe_load(file)
     return _md_to_latex(information)

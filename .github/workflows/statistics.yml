@@ -35,3 +35,4 @@ jobs:
           PULL_BRANCH_NAME: source
           PUSH_BRANCH_NAME: main
           SYMBOL_VERSION: 2
+          FORCE_ADD: "True"

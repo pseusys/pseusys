@@ -27,9 +27,9 @@ def process_templates(profile: CVProfile) -> None:
     information = unyaml(info_root)
     for template in template_root.glob("*.tex"):
         data = ProfileDict(information, template.stem, profile)
-        with open(template, "r") as file:
+        with open(template, "r", encoding="utf-8") as file:
             payload = render(file, data, def_ldel="%{", def_rdel="}%")
-        with open(build_root / template.name, "w") as file:
+        with open(build_root / template.name, "w", encoding="utf-8") as file:
             file.write(payload)
 
 

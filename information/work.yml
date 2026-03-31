@@ -19,7 +19,9 @@ work:
       start: Sept '25
       end: Present
       profiles:
-        - all
+        - frontend
+        - backend
+        - devops
 
     # --- Ansys ---
     - job: Backend Developing Intern
@@ -45,11 +47,11 @@ work:
     # --- Amadeus ---
     - job: Full Stack Intern
       place: Amadeus - Nice, France
-      resp: Developed mutation testing tools for a large-scale C++ project, involving abstract syntax tree construction, partial code compilation, and code mutation. Also experimented with AI-assisted testing approaches.
+      resp: Developed mutation testing tools for a large-scale C++ codebase (ticket search engine), involving AST construction, partial compilation, and code mutation to assess test-suite effectiveness.
       start: Feb '24
       end: Aug '24
       profiles:
-        - research
+        - devops
 
     - job: Full Stack Intern
       place: Amadeus - Nice, France
@@ -60,6 +62,7 @@ work:
       start: Feb '24
       end: Aug '24
       profiles:
+        - frontend
         - devops
 
     # --- LIGLAB ---
@@ -102,7 +105,9 @@ work:
       start: May '22
       end: Jan '25
       profiles:
-        - all
+        - frontend
+        - backend
+        - devops
 
     # --- Seventest ---
     - job: Full Stack Intern

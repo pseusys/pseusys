@@ -1,21 +1,21 @@
 education:
   items:
-    - title: Ms. Sc. - Informatics
+    - title: Ms. Sc. - Informatics (MoSIG)
       start: 2023
       end: 2025
       place: Université Grenoble Alpes / Grenoble INP - Ensimag
-      result: Graduated with **15.343** of **20** average score (French grading system).
-      # TODO(msc-track): what was the specific Ensimag track/specialization?
-      #   (e.g., "Internet, Services and Connected Systems" or "Software Engineering")
-      # TODO(msc-notable-courses): any courses especially relevant to PhD research?
+      result: |
+        Graduated with **15.343** of **20** average score (French grading system).
+        - Notable courses: Programming Languages and Compiler Design (14.1), Principles of Operating Systems (17.45), Introduction to Distributed Systems (16.75), Computer Networks Principles (17.24), Parallel Algorithms and Programming (15.6).
+        - Exchange semester at HKUST (16.0/20): Computer Security, Computer Networks, Deep Learning for Computer Vision, Distributed AI Systems.
+        - Master's thesis: researched binary schema specification formats (FlatBuffers, Protobuf, Cap'n Proto, MessagePack) and designed a schema-driven code generation pipeline for multi-language client libraries in the Ansys DPF framework; supervised by Camille Bellot.
       profiles:
         - all
     - title: B. Tech. - Software Engineering
       start: 2018
       end: 2022
-      place: St. Petersburg Electrotechnical University (ETU)
+      place: St. Petersburg Electrotechnical University (ETU), Dept. MOEVM, Faculty KTI
       result: Passed with **4.4** of **5.0** average score.
-      # TODO(bsc-department): exact department name (e.g., MOEVM department?)
       profiles:
         - all
     - title: High school

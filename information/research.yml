@@ -1,24 +1,36 @@
 research:
-  statement: >-
-    My research interests lie at the intersection of network protocol design, distributed systems,
-    and applied cryptography. I am particularly interested in developing communication protocols
-    that resist traffic analysis and censorship, designing decentralized architectures for secure
-    peer-to-peer communication, and exploring hybrid transport systems that bridge different
-    network technologies. My work on the TYPHOON protocol — a UDP-based transport-layer protocol
-    that eliminates all cleartext fields, generates decoy traffic, and mimics generic protocol
-    behavior to make deep packet inspection economically impractical — exemplifies this focus.
-    My parallel work on Airwire, a hybrid messenger that seamlessly switches between web API and
-    SMS/MMS transport with end-to-end encryption, demonstrates my interest in practical secure
-    communication across heterogeneous networks. I aim to contribute to making private, resilient
-    communication systems more accessible through rigorous protocol specification and formal analysis.
+  statements:
+    - profiles: [research]
+      text: >-
+        My research interests lie at the intersection of network protocol design, distributed systems,
+        and applied cryptography. I am particularly interested in developing communication protocols
+        that resist traffic analysis and network surveillance, designing secure peer-to-peer
+        communication architectures, and exploring hybrid transport systems that bridge different
+        network technologies. My work on the TYPHOON protocol — a UDP-based transport-layer protocol
+        that eliminates all cleartext fields, generates decoy traffic, and mimics generic protocol
+        behavior to make traffic identification economically impractical — exemplifies this focus.
+        My parallel work on Airwire, a hybrid messenger that seamlessly switches between web API and
+        SMS/MMS transport with end-to-end encryption, demonstrates my interest in practical secure
+        communication across heterogeneous networks. I aim to contribute to making private, resilient
+        communication systems more accessible through rigorous protocol specification and formal analysis.
+    - profiles: [research_crypto]
+      text: >-
+        My research focuses on applied cryptography and traffic-analysis-resistant protocols.
+        My work on TYPHOON specifies a UDP-based transport that eliminates all cleartext fields,
+        integrates post-quantum readiness via Classic McEliece KEM alongside XChaCha20-Poly1305
+        and AES-GCM-256, and uses decoy traffic generation to make traffic identification
+        economically impractical. I am interested in building formally specified, cryptographically
+        rigorous protocols for private peer-to-peer communication, with particular attention to
+        post-quantum primitives and their deployment constraints.
+    - profiles: [research_networking]
+      text: >-
+        My research focuses on network protocol design and traffic-obfuscation infrastructure.
+        My work on TYPHOON specifies a UDP-based transport designed to make traffic identification
+        impractical by mimicking generic protocol behavior and generating cover traffic. My parallel
+        work on Airwire, a hybrid messenger that seamlessly switches between web API and SMS/MMS
+        transport, demonstrates interest in resilient communication across heterogeneous networks.
+        I aim to contribute to the design of protocols that remain robust against deep packet
+        inspection and network-level adversaries.
   keywords:
-    - Network protocol design
-    - Distributed systems
-    - Peer-to-peer networks
-    - Applied cryptography
-    - Traffic analysis resistance
-    - Censorship circumvention
-    - Deep packet inspection evasion
-    - Secure messaging
-    - Post-quantum cryptography
-    - Hybrid transport systems
+    - profiles: [research]
+      text: "Network protocol design; Distributed systems; Peer-to-peer networks; Applied cryptography; Traffic analysis resistance; Network observability; Traffic obfuscation; Secure messaging; Post-quantum cryptography; Hybrid transport systems"

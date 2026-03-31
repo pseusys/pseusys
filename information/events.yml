@@ -7,7 +7,9 @@ events:
         - all
     - name: Scientific and technical seminar (ETU)
       date: 2022
-      description: Presented bachelor's thesis project (HogWeedGo) at seminar conducted by ETU MOEVM department.
+      description: >-
+        Presented bachelor's thesis project (HogWeedGo) at seminar conducted by ETU MOEVM department.
+        \href{https://etu.ru/assets/files/Faculty-FKTI/MO/sbornik-2022-moevm.pdf}{Published in proceedings}, pp. 12--15.
       profiles:
         - all
     - name: BEAC Youth Model Conference

@@ -1,6 +1,6 @@
 from typing import Callable, Dict, List
 
-from support import CVProfile
+from support import CVProfile, PROFILE_PARENTS
 
 
 class ProfileDict(Dict):
@@ -37,13 +37,15 @@ class ProfileDict(Dict):
         raise RuntimeError(f"There is no entry '{subpath}' in info dictionary!")
 
     def _filter_iter(self, iterable: List) -> List:
+        parent = PROFILE_PARENTS.get(self.profile)
         filtered = list()
         for elem in iterable:
             profs = elem.get(self._PROFILE_KEY, None)
             if self.profile is CVProfile.ALL:
                 filtered += [elem]
             elif profs is not None:
-                if self.profile.value in profs or CVProfile.ALL.value in profs:
+                if (self.profile.value in profs or CVProfile.ALL.value in profs
+                        or (parent is not None and parent.value in profs)):
                     filtered += [elem]
                 elif not isinstance(profs, List):
                     raise RuntimeError(f"Profile key '{self._PROFILE_KEY}' should be a list on every element!")

@@ -3,9 +3,16 @@ projects:
   - name: TYPHOON
     tools: Rust, UDP, XChaCha20-Poly1305, AES-GCM-256, Classic McEliece, X25519, Ed25519, BLAKE3
     desc: >-
-      A novel transport-layer protocol specification and Rust reference implementation designed to resist
-      deep packet inspection. Features fully encrypted packets with no cleartext headers, decoy traffic
-      generation, fake protocol header mimicry, and multiple cryptographic modes. Paper in preparation.
+      Transport protocol designed to make traffic statistically unidentifiable, not merely encrypted
+      ("Transfer Your Packets Hidden Over Observed Networks"). UDP payload is fully opaque: encrypted
+      metadata ("tailor") is appended at the end of each packet — no cleartext fields, no fixed magic
+      bytes. Fake configurable protocol headers (5 field behavior modes: random, constant, volatile,
+      switching, incremental) mimic arbitrary existing protocols. Four adaptive decoy modes (Heavy,
+      Noisy, Sparse, Smooth) use EWMA-based rate tracking and exponential/Gaussian timing to prevent
+      traffic-analysis fingerprinting. Post-quantum KEM (Classic McEliece 348864) combined with X25519
+      ECDH and BLAKE3 key derivation; software (XChaCha20-Poly1305) and hardware (AES-GCM-256) cipher
+      suites. Rust reference implementation covers full crypto stack and all decoy modes; session layer
+      in progress. Paper in preparation.
     link: https://github.com/pseusys/TYPHOON
     start: 2024
     end: Present
@@ -15,13 +22,14 @@ projects:
 
   - name: Airwire
     tools: Protobuf, X25519, XChaCha20-Poly1305, Firebase, SMS/MMS
-    # TODO(airwire-tools): add the implementation language(s) — what is the server
-    #   written in? What is the client written in? (e.g., Python, Kotlin, Go, etc.)
     desc: >-
-      A hybrid messaging application that switches between web API and SMS/MMS transport.
-      Server acts as a stateless relay with no message persistence. Features asynchronous
-      encryption for SMS mode, Markov-chain and steganographic encoding for MMS, and
-      chunked message delivery over 160-byte SMS constraints.
+      Design-stage hybrid messenger that switches between web API and SMS/MMS transport.
+      Server acts as a stateless relay with no message persistence; messages are stored
+      only on-device. Web mode uses TLS; SMS mode uses X25519 key exchange and
+      XChaCha20-Poly1305 encryption with a 48-byte per-chunk overhead, yielding 84 bytes
+      of usable ciphertext per SMS. MMS premium tier adds two steganographic encoding
+      modes: Markov-chain text generation and image steganography, to make payloads
+      appear benign to carrier inspection.
     link: https://github.com/pseusys/airwire
     start: 2025
     end: Present
@@ -32,26 +40,24 @@ projects:
   - name: SeasideVPN
     tools: Go, Rust, Python, gRPC, Protobuf, Docker
     desc: >-
-      A P2P VPN distributed system featuring the TYPHOON protocol, certificate-based authentication,
+      A P2P distributed system featuring the TYPHOON protocol, certificate-based authentication,
       traffic obfuscation, and TRON blockchain integration for decentralized provider registration.
     link: https://github.com/pseusys/SeasideVPN
     start: 2022
     end: 2024
     profiles:
-      - all
-      - research
+      - none
 
   - name: HogWeedGo
     tools: Python, Django, PostgreSQL, PostGIS, Docker, TensorFlow, Dart, Flutter
     desc: >-
       Bachelor's thesis: a monitoring system for Sosnowsky's hogweed, combining a
-      Django/PostGIS server, Flutter mobile client, and TensorFlow ML classifier.
-    # TODO(hogweedgo-desc): once bachelor's report is reviewed, enrich description with:
-    #   - specific ML model type (CNN? transfer learning? which base model?)
-    #   - classification accuracy / metrics achieved
-    #   - dataset details (self-collected? size? annotation method?)
-    #   - GIS features (hogweed location mapping, heatmaps, etc.)
-    #   - any user-facing features beyond classification (reporting workflow, alerts, etc.)
+      Django/PostGIS server, Flutter mobile client, and MobileNetV2 transfer-learning
+      classifier (ImageNet pretrained, fine-tuned on ~21 300 images from iNaturalist and
+      OpenImages across 3 classes). Achieved 92% average test accuracy; exported as a
+      79.3 MB TFLite model with ~0.4 s mobile inference. Server stores georeferenced
+      sightings (PostGIS) and exposes a REST API; mobile app supports photo-based
+      classification, map view of sightings, and report submission workflow.
     link: https://github.com/pseusys/HogWeedGo
     start: 2021
     end: 2022
@@ -62,37 +68,37 @@ projects:
       - research
 
   - name: imagine\_food
-    tools: Python, Poetry, Jupyter, LaTeX
-    # TODO(imagine-food-tools): add ML framework used (PyTorch? TensorFlow?)
-    #   and model architecture (ResNet? Vision Transformer? etc.)
+    tools: Python, PyTorch, Ultralytics, ONNX, TypeScript, React
     desc: >-
-      COMP4471 final project at HKUST: ML-based food recognition and classification.
-      Includes training notebooks and a CVPR-template research report.
-    # TODO(imagine-food-desc): add more detail:
-    #   - what dataset was used?
-    #   - what accuracy was achieved?
-    #   - was there a novel contribution or just reproduction?
+      COMP4471/ELEC4240 final project at HKUST: food allergen detection and calorie
+      estimation using YOLOv11n (nano) with two-stage transfer learning on the
+      Allergen30 dataset (30 classes, 416×416, 3× augmentation). Achieved mAP\@50 of
+      0.662 (precision 0.707, recall 0.602). Model exported to quantised INT8 ONNX and
+      deployed as a React/TypeScript web app with custom in-browser NMS logic.
+      Report written to CVPR standard, auto-published via GitHub Actions.
     link: https://github.com/pseusys/imagine_food
     start: 2024
     end: 2025
     profiles:
-      - all
-      - research
+      - frontend
+      - backend
+      - devops
 
   - name: Follow the DROW
     tools: Python, C++, PyTorch, ROS, Docker, pybind11
     desc: >-
-      LIGLAB research internship: comparison framework for neural network (DROW) and
-      algorithmic person detectors on 2D LiDAR data. Includes FTD library, ROS package,
-      and Docker deployment for the RobAIR platform.
-    # TODO(ftd-desc): enrich from current repo and report:
-    #   - mention key finding: DROW dataset annotation quality issues
-    #   - mention Annotator node contribution for dataset re-annotation
-    #   - mention person tracker node with multiple tracking policies
-    #   - any follow-up work or improvements made after the internship?
+      LIG research internship: comparison framework for neural network (DROW) and
+      algorithmic person detectors on 2D LiDAR data. Key finding: DROW dataset annotation
+      quality is severely limited (valid annotations cover ~20 s out of 3 min of recorded
+      data), explaining large performance gaps vs. the algorithmic baseline. Contributions:
+      Annotator ROS node for manual dataset re-annotation via RViz; PersonTracker node with
+      four selectable follow-me policies (First, Closest, Tracked, None). Post-internship:
+      extended with FROG and JRDB dataset support, four new architectures (FullScanCNN,
+      SpaceTimeCNN, FullScanTransformer, Li2Former), and a unified training/evaluation
+      pipeline.
     link: https://github.com/pseusys/follow_the_drow
     start: 2023
-    end: 2023
+    end: 2024
     profiles:
       - all
       - research
@@ -100,8 +106,14 @@ projects:
   - name: MushOS
     tools: NASM, C, CMake, QEMU
     desc: >-
-      A UNIX-like OS prototype written from scratch, featuring a custom bootloader,
-      kernel, drivers, and a modular stdlib replacement (MushLib).
+      A UNIX-like OS prototype in x86 assembly and C, targeting 32-bit protected mode.
+      Hand-rolled two-stage bootloader (real-mode to protected-mode, custom flat GDT, no
+      GRUB); full IDT/PIC setup with all 256 interrupt vectors and 8259 PIC remapping;
+      preemptive round-robin multitasking with UNIX-style fork() and page-directory
+      cloning; two-level paging with bitmap frame allocator and kernel/user separation;
+      VGA text-mode (80x25, 16 colors) and interrupt-driven keyboard drivers; raw-sector
+      module loader; and MushLib — a self-contained freestanding stdlib (heap, string,
+      format with 8 specifiers, vararg, exceptions, color-coded kernel logging).
     link: https://github.com/pseusys/MushOS
     start: 2019
     end: 2020
@@ -111,23 +123,33 @@ projects:
       - research
 
   - name: Classic Dungeon
-    tools: Kotlin Multiplatform, OpenGL
-    desc: A multiplatform rogue-like game with custom OpenGL rendering engine, written from scratch.
-    # TODO(classicdungeon-desc): could not access repo README — any notable
-    #   technical details worth adding? (e.g., custom ECS, procedural generation, etc.)
+    tools: Kotlin Multiplatform, OpenGL, WebGL, Coroutines
+    desc: >-
+      Rogue-like game engine written from scratch targeting Android, Desktop (JVM), and
+      Web (WebGL) from a single Kotlin Multiplatform codebase. Custom hand-rolled OpenGL
+      wrapper layer: VBO batching, texture atlases with frame animation, bitmap fonts,
+      gradient textures, custom 4×4 matrix math, and a vertex/fragment shader pipeline
+      with per-sprite material and ambient color blending. UI built on a declarative
+      JSON layout system (JSON Schema validated) with a widget-tree scenegraph and
+      extension-interface behaviors (Clickable, Movable, Zoomable). Coroutine-based
+      async resource loading. Game logic layer in progress.
     link: https://github.com/pseusys/ClassicDungeon
     start: 2021
     end: 2022
     profiles:
       - backend
       - devops
-      - research
 
   - name: Silentium Morse Messenger
-    tools: Kotlin, Android Framework
-    desc: A server-less messenger using Morse code encoding, with a built-in learning tool.
-    # TODO(silentium-desc): could not access repo README — any notable technical
-    #   details? (e.g., how does server-less message delivery work? Bluetooth? NFC? audio?)
+    tools: Kotlin, Android, Firebase, Protobuf, RSA
+    desc: >-
+      Android messenger with no custom backend: messages are delivered peer-to-peer via
+      Firebase Cloud Messaging, with contact discovery through Firebase Realtime Database.
+      Novel 2-bit BiBit/Myte encoding packs Morse code (dot, dash, gap, space) into a
+      compact BigInteger; payloads are Protobuf-serialized and end-to-end encrypted with
+      RSA-2048 (Android Keystore hardware-backed). Includes a system-wide Morse IME
+      keyboard usable in any app, and multi-channel incoming-message alerts (sound,
+      vibration, flashlight).
     link: https://github.com/pseusys/SilentiumMorseMessenger
     start: 2022
     end: 2022
@@ -161,8 +183,33 @@ projects:
     profiles:
       - none
 
-  # TODO(current-repo): add coursework compilation project once reviewed:
-  #   - link: https://github.com/pseusys/current
-  #   - which courses from ETU and Ensimag are included?
-  #   - are there any standalone projects within it worth listing separately?
-  #   - any coursework related to networking, distributed systems, or crypto?
+  - name: current
+    tools: Java, C++, Python, Go, VHDL, JavaScript, PyTorch, MPI, OpenMP, RabbitMQ, ROS
+    desc: >-
+      Coursework compilation spanning ETU (algorithms, OS, databases, networking, web),
+      Ensimag MoSIG M1 (distributed systems with RabbitMQ virtual-node topology; parallel
+      computing with MPI/OpenMP; autonomous RobAIR navigation with particle-filter
+      localization; 3D graphics with OpenGL), and HKUST (image recognition with CNNs/GANs/
+      Vision Transformers/SimCLR in PyTorch; computer security projects covering binary
+      exploitation, web vulnerabilities — XSS, CSRF, SQL injection — and network attacks —
+      SYN-flood detection and MITM/DNS spoofing in Go; cloud computing with Hadoop
+      MapReduce on AWS).
+    link: https://github.com/pseusys/current
+    start: 2018
+    end: 2025
+    profiles:
+      - none
+
+  - name: personal-blog
+    tools: C, Meson, Podman, Markdown
+    desc: >-
+      Technical blog at [pseusys.hashnode.dev](https://pseusys.hashnode.dev) covering
+      systems programming topics, with full companion source code for each post.
+      Current post: a step-by-step guide to writing a custom Linux NetworkManager
+      VPN plugin from scratch in C (Meson build, Podman-based reproducible build
+      environment).
+    link: https://github.com/pseusys/personal-blog
+    start: 2025
+    end: Present
+    profiles:
+      - research
