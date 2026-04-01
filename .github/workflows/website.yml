@@ -20,7 +20,7 @@ concurrency:
 
 jobs:
   build:
-    name: Build Website and Deploy It to GitHub Pages 🚀
+    name: Build Website and Deploy It to GitHub Pages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository 🛎️
@@ -30,8 +30,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: 'npm'
-          cache-dependency-path: website/package-lock.json
 
       - name: Install dependencies 📥
         working-directory: website
