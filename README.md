@@ -6,17 +6,6 @@ My interests lie at the intersection of **network protocol design**, **distribut
 
 I also write about systems programming on my [blog](https://pseusys.github.io/pseusys/).
 
-## I am proud of
-
-<p align="center">
-    <img src="./assets/pin-TYPHOON.svg" alt="TYPHOON pinned repo card" />
-    <img src="./assets/pin-Airwire.svg" alt="Airwire pinned repo card" />
-</p>
-<p align="center">
-    <img src="./assets/pin-MushOS.svg" alt="MushOS pinned repo card" />
-    <img src="./assets/pin-HogWeedGo.svg" alt="HogWeedGo pinned repo card" />
-</p>
-
 ## I mostly use
 
 <p align="center">

@@ -1,91 +1,106 @@
 # `pseusys` personal repository
 
-## README file (and GitHub profile)
+This document describes building and deployment of this repository, all the associated deployments and assets.
 
-The original `README.md` file is on `source` branch, each day + on every change it gets rebuilt.
-After rebuilding, it is pushed to `main` branch (that is visible on [pseusys GitHub profile](https://github.com/pseusys)).
-The `README` is accompanied with all built images in a single commit.
+## Repository structure
+
+The `source` branch holds all source files. Automated workflows build artifacts and push them to the `main` branch, which is what GitHub displays on the profile page.
+
+---
+
+## README and GitHub profile
+
+`README.md` on `source` is the source of truth. On every push touching it (and daily via cron), two workflows run in sequence:
+
+1. **Waka Readme** (`statistics.yml`, job `update-readme`) — pulls WakaTime stats and injects them into the `<!--START_SECTION:waka-->` block, then commits the result to `main`.
+2. **GitHub stats cards** (`statistics.yml`, job `generate-cards`) — runs after `update-readme` on `main`, generates SVG cards via `readme-tools/github-readme-stats-action` and commits them to `assets/` with `git add -f`.
+
+Cards generated:
+
+- `assets/stats.svg` — GitHub contribution stats
+- `assets/top-langs.svg` — top languages (compact layout)
+
+---
 
 ## Curriculum vitae
 
-CVs are built from `LaTeX` sources, populated with personal information using `mustache` and then compiled to a single PDF file.
-The general building workflow is simple:
+CVs are built from LaTeX sources populated with personal data from YAML files, then compiled to PDF.
 
-1. All the information from `YAML` sources in [information](./information) directory is merged into a single dictionary.
-2. All the `LaTeX` templates in [templates](./curriculum_vitae/templates/) directory are populated using that dictionary.
-3. The `LaTeX` root sources in [sources](./curriculum_vitae/sources/) are built, sources generated from templates are included.
+### Pipeline
+
+1. All YAML sources in [information/](./information/) are merged into a single dictionary.
+2. LaTeX templates in [curriculum_vitae/templates/](./curriculum_vitae/templates/) are rendered using that dictionary (Mustache/Chevron with `%{` / `}%` delimiters).
+3. The rendered templates and a LaTeX root file from [curriculum_vitae/sources/](./curriculum_vitae/sources/) are compiled by `pdflatex` inside a Docker container — no local LaTeX installation required.
+
+### Profiles
+
+Each item in the YAML sources has a `profiles:` field. Only items matching the active profile appear in the output.
+
+| Profile | Description |
+|---|---|
+| `frontend` | Frontend-focused CV |
+| `backend` | Backend-focused CV |
+| `devops` | DevOps-focused CV |
+| `all` | General-purpose CV (all non-research items) |
+| `research_crypto` | Research CV with cryptography focus |
+| `research_networking` | Research CV with networking focus |
+
+Special profile values in YAML:
+
+- `all` — item appears in every non-research profile
+- `none` — item is hidden from all profiles (used to keep items in source without publishing them)
+
+Research profiles use `base_research.tex` (single-column: header → contact + research interests row → full-width sections). All other profiles use `base.tex` (two-column paracol layout).
 
 ### Build features
 
-For nice, fine-grained and `LaTeX`-independent builds, some information pre-processing is required.
-
-#### List profiling
-
-Whenever a list is processed, a special key (`profiles`) is used to filter elements from appearing in different CV variants.
-There are 4 different profiles supported right now: `all`, `backend`, `fullstack` and `backend`, `profiles` field can contain one or many of them.
-NB! Profile `all` is equivalent to `backend`, `fullstack` and `backend` together.
-
 #### Markdown processing
 
-All the information fields can include markdown code.
-This markdown is processed before including into `LaTeX` sources.
-Unfortunately, this markdown has to be treated specially: `mustache` tends to break lines randomly upon template evaluation and that often messes up markdown syntax.
+Text fields in YAML support a subset of Markdown, converted to LaTeX at build time:
 
-Only subset of markdown is supported for now, although it can be expanded if needed.
-Currently supported syntax:
-
-1. Bold:
-   ```markdown
-   **Text in Bold**
-   ```
-2. Links:
-   ```markdown
-   [Example Link](https://example.com)
-   ```
-3. Lists:
-   ```markdown
-   + Element 1
-   + Element 2
-   ```
-4. Line breaks (not standard!):
-   ```markdown
-   - Line 1
-   - Line 2
-   ```
-
-That is, a special rule is used for treating line breaks:
-> All the line breaks are removed except for the ones that are parts of lists, where lists prefixed by `+` are rendered as lists and lists prefixed by `-` are rendered just as separate lines.
+| Syntax | Renders as |
+|---|---|
+| `**bold**` | Bold text |
+| `[text](url)` | Hyperlink |
+| `+ item` | Bullet list |
+| `- line` | Line break (not a list) |
 
 #### Lambda functions
 
-Compiler makes use of [chevron](https://github.com/noahmorrison/chevron) lambdas and defines a few functions that are available during build time.
-The functions have names that end with parentheses and can accept one or more comma-separated arguments, that will be treated differently.
-Keep in mind that since the functions use `eval` to evaluate string representation of python code, they are terribly unsafe!
-Here are the function descriptions:
+Two Chevron lambda functions are available in templates:
 
-1. `count`: accepts one argument that should be a mathematical expression in pythonic syntax; evaluates the expression and returns the result.
-2. `max`: accepts two arguments: a `mustache` iterable and a string key; evaluates and returns the maximum key value over all the iterable elements.
+- `count(expr)` — evaluates a Python math expression and returns the result.
+- `max(iterable, key)` — returns the maximum value of `key` across all elements of a Mustache iterable.
 
-> NB! It [is possible](https://stackoverflow.com/a/65911196) to access parent iterable from inside of a child in `mustache`.
+### Build commands
 
-### Build and run
+```shell
+# Build a single profile (PROFILE defaults to "all")
+make build-cv PROFILE=research
 
-Following commands can be used for automated CV generation.
-No local `LaTeX` compiler is required, all the processing is performed with a [`blang/latex`](https://github.com/blang/latex-docker) Docker container.
-`LaTeX` sources are only processed once (which is fine, because CV does not and should not include any bibliography).
+# Build all profiles
+make build-all-cv
 
-- For a single profile:
+# Clean all build artifacts
+make clean
+```
 
-  ```shell
-  make build-cv PROFILE=[PROFILE_NAME]
-  ```
+Profiles: `frontend`, `backend`, `devops`, `all`, `research`, `research_crypto`, `research_networking`.
 
-    where `PROFILE_NAME` should be one of `frontend`, `backend`, `devops`, `all`.
+Output PDFs are written to `curriculum_vitae/pdf/<profile>.pdf`.
 
-- For all profiles at once:
+---
 
-  ```python
-  make build-all-cv
-  ```
+## Personal website
 
-> The generated files will be named according to profile and placed into `curriculum_vitae/pdf/`.
+The website source is in [website/](./website/). It is a Next.js 15 static site (TypeScript + Tailwind CSS v4) deployed to GitHub Pages at [`pseusys.github.io/pseusys`](https://pseusys.github.io/pseusys).
+
+The `website.yml` workflow triggers on pushes to `source` touching `website/**`, builds the static output, and deploys it to the `github-pages` environment.
+
+```shell
+# Install dependencies and start local dev server (http://localhost:3000/)
+make dev-website
+
+# Build static output to website/out/
+make build-website
+```

@@ -65,42 +65,10 @@ jobs:
           path: assets/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate pin card — TYPHOON 📌
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: pin
-          options: username=pseusys&repo=TYPHOON
-          path: assets/pin-TYPHOON.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate pin card — Airwire 📌
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: pin
-          options: username=pseusys&repo=Airwire
-          path: assets/pin-Airwire.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate pin card — MushOS 📌
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: pin
-          options: username=pseusys&repo=MushOS
-          path: assets/pin-MushOS.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate pin card — HogWeedGo 📌
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: pin
-          options: username=pseusys&repo=HogWeedGo
-          path: assets/pin-HogWeedGo.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Commit and push cards 💾
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f assets/stats.svg assets/top-langs.svg assets/pin-TYPHOON.svg assets/pin-Airwire.svg assets/pin-MushOS.svg assets/pin-HogWeedGo.svg
+          git add -f assets/stats.svg assets/top-langs.svg
           git commit -m "Update GitHub stats cards" || exit 0
           git push
