@@ -54,16 +54,22 @@ Research profiles use `base_research.tex` (single-column: header → contact + r
 
 ### Build features
 
-#### Markdown processing
+#### Markdown as source of truth
 
-Text fields in YAML support a subset of Markdown, converted to LaTeX at build time:
+**Markdown is the only formatting syntax present in `information/*.yml`.** No LaTeX commands, no HTML tags — plain Markdown only. Both build targets convert from Markdown at build time:
 
-| Syntax | Renders as |
-|---|---|
-| `**bold**` | Bold text |
-| `[text](url)` | Hyperlink |
-| `+ item` | Bullet list |
-| `- line` | Line break (not a list) |
+| Syntax | LaTeX output (`unyaml.py`) | HTML output (`markdown.ts`) |
+|---|---|---|
+| `**bold**` | `\textbf{bold}` | `<strong>bold</strong>` |
+| `[text](url)` | `\href{url}{text}` | `<a href="url">text</a>` |
+| `+ item` | `\begin{itemize}\item …\end{itemize}` | `<ul><li>…</li></ul>` |
+| `- line` | `line \\` | `line<br/>` |
+| `—` (em-dash) | `---` | `—` (passed through) |
+| `–` (en-dash) | `--` | `–` (passed through) |
+| `&` | `\&` (auto-escaped) | `&amp;` (auto-escaped) |
+| `#` | `\#` (auto-escaped) | `#` (safe in HTML) |
+
+URL content inside `[text](url)` links is never subject to `&` / `#` escaping — it is passed verbatim to `\href{}` in LaTeX (where `hyperref` handles it) and to the `href` attribute in HTML (where `&amp;` in query strings is correct).
 
 #### Lambda functions
 
@@ -104,3 +110,15 @@ make dev-website
 # Build static output to website/out/
 make build-website
 ```
+
+### Data sourcing
+
+Pages are populated at build time from the same YAML sources used by the CV generator (`information/*.yml`). The data layer is in `website/lib/data.ts`; text fields are rendered via `website/lib/markdown.ts`, which converts the same subset of Markdown supported by the CV pipeline (bold, links, bullet lists, line breaks) into HTML, and also handles LaTeX `\href{url}{text}` syntax present in some fields.
+
+| Route | Source files | Notes |
+|---|---|---|
+| `/` | `contact.yml`, `research.yml` | Name, title, social links, intro paragraph |
+| `/research` | `research.yml`, `publications.yml` | Research statement + keywords; papers, reports, theses |
+| `/experience` | `work.yml`, `education.yml`, `events.yml` | Work (research profile), education, events & recognitions |
+| `/projects` | `projects.yml` | All projects except `profiles: [none]` |
+| `/cv` | — | Static links to PDF artifacts from the GitHub `curriculum-vitae` release |

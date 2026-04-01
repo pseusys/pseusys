@@ -14,7 +14,7 @@ work:
       place: Synopsys (formerly Ansys) - Lyon, France
       resp: |
         + Changed the physical simulation data representation and its API, focusing on processing and transmission speed.
-        + Enhanced user library by providing copy-less and allocation-less access to raw FlatBuffers-based data using generated code in C++, Python and C\#.
+        + Enhanced user library by providing copy-less and allocation-less access to raw FlatBuffers-based data using generated code in C++, Python and C#.
         + User interface became more friendly, efficient and more consistent with the well-defined schemas, used as the source of truth.
       start: Sept '25
       end: Present
@@ -26,7 +26,7 @@ work:
     # --- Ansys ---
     - job: Backend Developing Intern
       place: Ansys (acquired by Synopsys) - Lyon, France
-      resp: "Master's thesis internship: designed and implemented a multi-language code generation pipeline for the DPF simulation framework, replacing manually maintained client libraries in Python, C++, and C\\# with auto-generated code from schema definitions."
+      resp: "Master's thesis internship: designed and implemented a multi-language code generation pipeline for the DPF simulation framework, replacing manually maintained client libraries in Python, C++, and C# with auto-generated code from schema definitions."
       start: Feb '25
       end: Aug '25
       profiles:
@@ -36,7 +36,7 @@ work:
       place: Ansys (acquired by Synopsys) - Lyon, France
       resp: |
         + Was part of a team responsible for data storage and transfer optimization between different parts of [AnsysDPF](https://dpf.docs.pyansys.com) infrastructure.
-        + Proposed and implemented in Python a code generation design; internal data structures have been wrapped with consistent and schema-based generated user interfaces (in Python, C++ and C\#).
+        + Proposed and implemented in Python a code generation design; internal data structures have been wrapped with consistent and schema-based generated user interfaces (in Python, C++ and C#).
         + As a result, codebase maintenance needs were reduced, code style and documentation coverage increased, and further development sped up significantly.
       start: Feb '25
       end: Aug '25

@@ -1,5 +1,5 @@
 from pathlib import Path
-from re import compile, match, sub
+from re import compile, match, sub, split
 from typing import Any, Dict, List, TypeVar
 
 from yaml import safe_load
@@ -16,8 +16,14 @@ _LATEX_BOLD = r"\\textbf{\g<content>}"
 _MD_LINK = compile(r"\[(?P<text>.*?)\]\((?P<url>.*?)\)")
 _LATEX_LINK = r"\\href{\g<url>}{\g<text>}"
 
+# Matches already-converted \href{url}{text} blocks — used to protect URLs
+# from special-character escaping that follows link conversion.
+_LATEX_HREF_SPLIT = compile(r"(\\href\{[^}]*\}\{[^}]*\})")
+
 _UNICODE_SUBS = [
     (compile(r"×"), r"$\\times$"),
+    (compile(r"—"), r"---"),   # Unicode em-dash → LaTeX em-dash
+    (compile(r"–"), r"--"),    # Unicode en-dash → LaTeX en-dash
 ]
 
 
@@ -53,6 +59,20 @@ def _md_process_lines(string: str) -> str:
     return " ".join(result)
 
 
+def _escape_latex_specials(text: str) -> str:
+    """Escape & and # for LaTeX, but leave URLs inside \\href{}{} untouched."""
+    parts = _LATEX_HREF_SPLIT.split(text)
+    result = []
+    for i, part in enumerate(parts):
+        if i % 2 == 1:
+            # Odd indices are \href{}{} matches — leave verbatim
+            result.append(part)
+        else:
+            # Even indices are plain text — escape LaTeX special characters
+            result.append(part.replace("&", r"\&").replace("#", r"\#"))
+    return "".join(result)
+
+
 def _md_to_latex(object: _T) -> _T:
     if isinstance(object, Dict):
         for key in object.keys():
@@ -64,6 +84,7 @@ def _md_to_latex(object: _T) -> _T:
         object = _md_process_lines(object)
         object = sub(_MD_BOLD, _LATEX_BOLD, object)
         object = sub(_MD_LINK, _LATEX_LINK, object)
+        object = _escape_latex_specials(object)
         for pattern, replacement in _UNICODE_SUBS:
             object = sub(pattern, replacement, object)
     return object

@@ -9,7 +9,7 @@ events:
       date: 2022
       description: >-
         Presented bachelor's thesis project (HogWeedGo) at seminar conducted by ETU MOEVM department.
-        \href{https://etu.ru/assets/files/Faculty-FKTI/MO/sbornik-2022-moevm.pdf}{Published in proceedings}, pp. 12--15.
+        [Published in proceedings](https://etu.ru/assets/files/Faculty-FKTI/MO/sbornik-2022-moevm.pdf), pp. 12–15.
       profiles:
         - all
     - name: Software registration — FIPS Russia
@@ -17,7 +17,7 @@ events:
       description: >-
         Co-authored software registered with the Federal Service for Intellectual Property (Rospatent).
         The program automates formal checking of graduation thesis presentations against a set of structural criteria.
-        \href{https://new.fips.ru/registers-doc-view/fips_servlet?DB=EVM&DocNumber=2022614398&TypeFile=html}{Certificate No.\ 2022614398}, SPbGETU ``LETI''.
+        [Certificate No. 2022614398](https://new.fips.ru/registers-doc-view/fips_servlet?DB=EVM&DocNumber=2022614398&TypeFile=html), SPbGETU "LETI".
       profiles:
         - all
         - research
