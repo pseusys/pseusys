@@ -1,15 +1,32 @@
 # Greetings, I am Aleksandr 🤝
 
+R&D Engineer at Synopsys · MSc Informatics (Grenoble INP – Ensimag / HKUST) · BSc Software Engineering (ETU LETI)
+
+My interests lie at the intersection of **network protocol design**, **distributed systems**, and **applied cryptography** — particularly protocols that resist traffic analysis, secure peer-to-peer architectures, and hybrid transport systems. On the engineering side I work across backend systems, DevOps tooling, and code generation pipelines.
+
+I also write about systems programming on my [blog](https://pseusys.github.io/pseusys/).
+
+## I am proud of
+
+<p align="center">
+    <img src="./assets/pin-TYPHOON.svg" alt="TYPHOON pinned repo card" />
+    <img src="./assets/pin-Airwire.svg" alt="Airwire pinned repo card" />
+</p>
+<p align="center">
+    <img src="./assets/pin-MushOS.svg" alt="MushOS pinned repo card" />
+    <img src="./assets/pin-HogWeedGo.svg" alt="HogWeedGo pinned repo card" />
+</p>
+
 ## I mostly use
 
 <p align="center">
-    <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=pseusys&layout=compact" />
+    <img src="./assets/top-langs.svg" alt="Top languages card" />
 </p>
 
 ## My GitHub stats
 
 <p align="center">
-    <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=pseusys&count_private=true&show_icons=true&theme=gruvbox" />
+    <img src="./assets/stats.svg" alt="GitHub stats card" />
 </p>
 
 ## My WakaTime stats

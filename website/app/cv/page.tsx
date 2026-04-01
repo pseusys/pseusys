@@ -1,7 +1,6 @@
 const CV_BASE = 'https://github.com/pseusys/pseusys/releases/download/curriculum-vitae';
 
 const CV_PROFILES = [
-  { slug: 'research',            label: 'Research' },
   { slug: 'research_crypto',     label: 'Research — Cryptography' },
   { slug: 'research_networking', label: 'Research — Networking' },
   { slug: 'all',                 label: 'General' },
