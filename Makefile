@@ -6,9 +6,9 @@ SHELL = /bin/bash
 
 PATH := venv/bin:$(PATH)
 
-PROFILES = frontend backend devops all research research_crypto research_networking
+PROFILES = frontend backend devops all research_crypto research_networking
 PROFILE = all
-BASE_TEX = $(if $(filter research research_crypto research_networking,$(PROFILE)),base_research.tex,base.tex)
+BASE_TEX = $(if $(filter research_crypto research_networking,$(PROFILE)),base_research,base)
 
 
 help:
@@ -25,8 +25,8 @@ build-cv: venv
 	@ # Build CV PDF with python script
 	mkdir -p curriculum_vitae/pdf
 	python3 curriculum_vitae/scripts/assemble.py $(PROFILE)
-	docker run --rm -i --user="$(id -u):$(id -g)" -v "$(PWD)/curriculum_vitae:/data" blang/latex /bin/sh -c "cd sources && pdflatex -output-directory ../build $(BASE_TEX)"
-	cp curriculum_vitae/build/base.pdf curriculum_vitae/pdf/$(PROFILE).pdf
+	docker run --rm -i --user="$(id -u):$(id -g)" -v "$(PWD)/curriculum_vitae:/data" blang/latex /bin/sh -c "cd sources && pdflatex -output-directory ../build $(BASE_TEX).tex"
+	cp curriculum_vitae/build/$(BASE_TEX).pdf curriculum_vitae/pdf/$(PROFILE).pdf
 .PHONY: build-cv
 
 build-all-cv:
