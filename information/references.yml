@@ -14,31 +14,24 @@ references:
       relationship: Research internship supervisor; supervised LiDAR person detection comparison project (summer 2023)
       profiles:
         - all
-    - name: Mikhail M. Zaslavsky
+    - name: Mark Zaslavsky
       title: Ph.D. (Candidate of Technical Sciences), Associate Professor
       institution: St. Petersburg Electrotechnical University (ETU), Department MOEVM
-      # email unknown; supervisor confirmed as reachable
+      email: mark.zaslavskiy@gmail.com
       relationship: Bachelor's thesis supervisor (HogWeedGo project)
       profiles:
         - all
     - name: Denis Kuznetsov
       title: Research Engineer, Neural Networks and Deep Learning Lab
       institution: DeepPavlov.ai (MIPT)
-      # no public email — contact via https://github.com/kudep
+      email: kuznetsov.dp@phystech.edu
       relationship: Engineering manager during software engineering role (May 2022 - Jan 2025)
       profiles:
         - all
     - name: Nicolas Nordmann
       title: Manager, Software Development
       institution: Amadeus - Nice, France
-      # email unknown — contact via https://www.linkedin.com/in/nicolasnnn/
+      email: nicolas.nordmann@amadeus.com
       relationship: Amadeus internship supervisor (automated testing / mutation framework project)
       profiles:
         - all
-
-  # HKUST professors: relationship was not close enough for reference letters.
-  # Professors encountered during exchange (Sept 2024 – Jan 2025):
-  #   https://cse.hkust.edu.hk/~dongdong/
-  #   https://home.cse.ust.hk/~csbb/
-  #   https://cse.hkust.edu.hk/~songguo/Teaching.html
-  #   https://facultyprofiles.hkust.edu.hk/profiles.php?profile=garvin-percy-dias-percy

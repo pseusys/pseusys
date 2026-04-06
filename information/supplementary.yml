@@ -109,5 +109,3 @@ supplementary:
       - Ed25519 (signatures)
       - BLAKE3 (hashing)
     evaluation: No empirical evaluation yet; benchmarks and traffic analysis resistance tests are planned.
-
-  target_universities: see information/phd_advisors.md for the full list of target PhD programs and professors
