@@ -2,8 +2,8 @@ const CV_BASE = 'https://github.com/pseusys/pseusys/releases/download/curriculum
 
 const CV_PROFILES = [
   { slug: 'research',      label: 'Research' },
-  { slug: 'cryptography',  label: 'Research — Cryptography' },
-  { slug: 'networking',    label: 'Research — Networking' },
+  { slug: 'cryptography',  label: 'Cryptography' },
+  { slug: 'networking',    label: 'Networking' },
   { slug: 'all',           label: 'General' },
   { slug: 'frontend',      label: 'Frontend' },
   { slug: 'backend',       label: 'Backend' },

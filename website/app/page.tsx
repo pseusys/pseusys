@@ -9,17 +9,29 @@ export default function Home() {
       <p className="text-lg text-gray-600 mt-1">{contact.title}</p>
 
       <p className="mt-4 text-gray-700 leading-relaxed">
-        I write code that misbehaves — on purpose, carefully, and with documented test cases.
+        I am a software engineer and researcher with a background in networked systems, applied
+        cryptography, and distributed computing. I hold a Master&apos;s degree from Grenoble INP –
+        Ensimag and a Bachelor&apos;s from St. Petersburg Electrotechnical University, with an exchange
+        semester at HKUST.
       </p>
       <p className="mt-3 text-gray-700 leading-relaxed">
-        R&D engineer at Synopsys by day. Protocol designer by night. I build things that make simulation
-        data go fast, network traffic go dark, and communication systems stay private in adversarial
-        conditions.
+        Currently, I work as an R&D engineer at Synopsys, where I built a schema-driven code
+        generation system for the DPF simulation framework. My research interests center on
+        privacy-preserving network protocols — in particular, designing systems where encrypted
+        traffic is indistinguishable from generic background noise.
       </p>
       <p className="mt-3 text-gray-700 leading-relaxed">
-        Currently obsessed with: making encrypted traffic look like generic noise, schema-driven
-        multi-language code generation, and the surprisingly large overlap between compiler
-        design and protocol specification.
+        I am actively looking for PhD positions in network security and privacy.
+      </p>
+      <p className="mt-3 text-gray-700 leading-relaxed">
+        Outside of work, I enjoy applying cryptography and machine learning to personal projects,
+        travelling whenever I get the chance, and writing short stories — in Russian, which keeps
+        the audience conveniently small.
+      </p>
+      <p className="mt-3 text-gray-700 leading-relaxed">
+        Looking ahead, I hope to grow into research and, eventually, teaching — sharing ideas
+        is half the fun of having them. On the literary side, I am working towards translating
+        my stories and getting them published, so the audience may grow after all.
       </p>
 
       <div className="mt-6 flex flex-wrap gap-4 text-sm">
