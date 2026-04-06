@@ -15,7 +15,15 @@ export default function CV() {
     <div>
       <h1 className="text-2xl font-bold">Curriculum Vitae</h1>
       <p className="mt-2 text-gray-600">
-        CVs are generated automatically from source data and published as GitHub release artifacts.
+        CVs are generated automatically from source data and published as GitHub release artifacts.{' '}
+        <a
+          href="https://github.com/pseusys/pseusys/blob/source/DEVELOPMENT.md"
+          className="text-blue-600 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Read about the generator.
+        </a>
       </p>
       <ul className="mt-6 space-y-2">
         {CV_PROFILES.map(({ slug, label }) => (
