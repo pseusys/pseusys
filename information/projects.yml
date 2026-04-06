@@ -67,7 +67,7 @@ projects:
       - devops
       - research
 
-  - name: imagine\_food
+  - name: imagine_food
     tools: Python, PyTorch, Ultralytics, ONNX, TypeScript, React
     desc: >-
       COMP4471/ELEC4240 final project at HKUST: food allergen detection and calorie
