@@ -83,7 +83,7 @@ supplementary:
       - Docker
 
   follow_the_drow_details:
-    link: https://github.com/pseusys/follow_the_drow
+    link: https://github.com/pseusys/current/tree/master/pr3
     report_in_current_repo: true
     note: >-
       Full quantitative performance comparison (DROW vs algorithmic detector) was not

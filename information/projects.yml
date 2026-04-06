@@ -96,7 +96,7 @@ projects:
       extended with FROG and JRDB dataset support, four new architectures (FullScanCNN,
       SpaceTimeCNN, FullScanTransformer, Li2Former), and a unified training/evaluation
       pipeline.
-    link: https://github.com/pseusys/follow_the_drow
+    link: https://github.com/pseusys/current/tree/master/pr3
     start: 2023
     end: 2024
     profiles:

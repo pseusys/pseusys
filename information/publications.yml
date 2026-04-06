@@ -35,7 +35,7 @@ publications:
         significant annotation quality issues in the DROW dataset affecting evaluation
         reliability; full quantitative comparison was not completed due to computing resource
         constraints.
-      link: https://github.com/pseusys/follow_the_drow
+      link: https://github.com/pseusys/current/tree/master/pr3
       profiles:
         - all
 
