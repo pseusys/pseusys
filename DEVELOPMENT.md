@@ -42,8 +42,8 @@ Each item in the YAML sources has a `profiles:` field. Only items matching the a
 | `backend` | Backend-focused CV |
 | `devops` | DevOps-focused CV |
 | `all` | General-purpose CV (all non-research items) |
-| `research_crypto` | Research CV with cryptography focus |
-| `research_networking` | Research CV with networking focus |
+| `cryptography` | Research CV with cryptography focus |
+| `networking` | Research CV with networking focus |
 
 Special profile values in YAML:
 
@@ -91,7 +91,7 @@ make build-all-cv
 make clean
 ```
 
-Profiles: `frontend`, `backend`, `devops`, `all`, `research`, `research_crypto`, `research_networking`.
+Profiles: `frontend`, `backend`, `devops`, `all`, `research`, `cryptography`, `networking`.
 
 Output PDFs are written to `curriculum_vitae/pdf/<profile>.pdf`.
 

@@ -1,39 +1,44 @@
 references:
   items:
     - name: Camille Bellot
-      title: "TODO(bellot-title): job title at Ansys/Synopsys"
+      title: Research and Development Engineer
       institution: Ansys / Synopsys - Lyon, France
-      email: "TODO(bellot-email): professional email"
+      email: camille.bellot@synopsys.com
       relationship: Master's internship supervisor; supervised code generation project for simulation framework
-      # TODO(bellot-academic): can Camille write a recommendation letter?
-      #   If not, is there an academic supervisor at UGA who can?
       profiles:
         - all
     - name: Olivier Aycard
-      title: "TODO(aycard-title): title at LIG / UGA (e.g., Maître de Conférences)"
-      institution: Grenoble Computer Science Laboratory (LIG), Université Grenoble Alpes
-      email: "TODO(aycard-email): professional email (try olivier.aycard@univ-grenoble-alpes.fr)"
+      title: Full Professor in Computer Science
+      institution: Grenoble-INP PHELMA / GIPSA Lab, Université Grenoble Alpes
+      email: olivier.aycard@grenoble-inp.fr
       relationship: Research internship supervisor; supervised LiDAR person detection comparison project (summer 2023)
       profiles:
         - all
-    - name: "TODO(bsc-supervisor): bachelor's thesis supervisor name"
-      title: "TODO(bsc-supervisor-title): title at ETU"
-      institution: St. Petersburg Electrotechnical University (ETU)
-      email: "TODO(bsc-supervisor-email): email"
+    - name: Mikhail M. Zaslavsky
+      title: Ph.D. (Candidate of Technical Sciences), Associate Professor
+      institution: St. Petersburg Electrotechnical University (ETU), Department MOEVM
+      # email unknown; supervisor confirmed as reachable
       relationship: Bachelor's thesis supervisor (HogWeedGo project)
-      # TODO(bsc-supervisor-available): is this person reachable and willing to write a letter?
-      #   Given geopolitical situation, consider whether a Russian reference is practical.
       profiles:
         - all
-    - name: "TODO(deeppavlov-ref): name of your manager or lead at DeepPavlov"
-      title: "TODO(deeppavlov-ref-title): title"
+    - name: Denis Kuznetsov
+      title: Research Engineer, Neural Networks and Deep Learning Lab
       institution: DeepPavlov.ai (MIPT)
-      email: "TODO(deeppavlov-ref-email): email"
+      # no public email — contact via https://github.com/kudep
       relationship: Engineering manager during software engineering role (May 2022 - Jan 2025)
       profiles:
         - all
+    - name: Nicolas Nordmann
+      title: Manager, Software Development
+      institution: Amadeus - Nice, France
+      # email unknown — contact via https://www.linkedin.com/in/nicolasnnn/
+      relationship: Amadeus internship supervisor (automated testing / mutation framework project)
+      profiles:
+        - all
 
-  # TODO(hkust-ref): did you build a relationship with any HKUST professor during
-  #   your exchange? A reference from an Asian university would be especially valuable
-  #   for PhD applications to other Asian universities.
-  # TODO(additional-refs): consider whether Amadeus supervisor could also serve as a reference
+  # HKUST professors: relationship was not close enough for reference letters.
+  # Professors encountered during exchange (Sept 2024 – Jan 2025):
+  #   https://cse.hkust.edu.hk/~dongdong/
+  #   https://home.cse.ust.hk/~csbb/
+  #   https://cse.hkust.edu.hk/~songguo/Teaching.html
+  #   https://facultyprofiles.hkust.edu.hk/profiles.php?profile=garvin-percy-dias-percy

@@ -8,12 +8,12 @@ class CVProfile(StrEnum):
     DEVOPS = "devops"
     ALL = "all"
     RESEARCH = "research"
-    RESEARCH_CRYPTO = "research_crypto"
-    RESEARCH_NETWORKING = "research_networking"
+    CRYPTOGRAPHY = "cryptography"
+    NETWORKING = "networking"
 
 
 # Child profiles inherit all items tagged with their parent profile.
 PROFILE_PARENTS: dict = {
-    CVProfile.RESEARCH_CRYPTO: CVProfile.RESEARCH,
-    CVProfile.RESEARCH_NETWORKING: CVProfile.RESEARCH,
+    CVProfile.CRYPTOGRAPHY: CVProfile.RESEARCH,
+    CVProfile.NETWORKING: CVProfile.RESEARCH,
 }

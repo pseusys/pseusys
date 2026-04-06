@@ -1,12 +1,13 @@
 const CV_BASE = 'https://github.com/pseusys/pseusys/releases/download/curriculum-vitae';
 
 const CV_PROFILES = [
-  { slug: 'research_crypto',     label: 'Research — Cryptography' },
-  { slug: 'research_networking', label: 'Research — Networking' },
-  { slug: 'all',                 label: 'General' },
-  { slug: 'frontend',            label: 'Frontend' },
-  { slug: 'backend',             label: 'Backend' },
-  { slug: 'devops',              label: 'DevOps' },
+  { slug: 'research',      label: 'Research' },
+  { slug: 'cryptography',  label: 'Research — Cryptography' },
+  { slug: 'networking',    label: 'Research — Networking' },
+  { slug: 'all',           label: 'General' },
+  { slug: 'frontend',      label: 'Frontend' },
+  { slug: 'backend',       label: 'Backend' },
+  { slug: 'devops',        label: 'DevOps' },
 ];
 
 export default function CV() {

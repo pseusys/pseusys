@@ -13,7 +13,7 @@ research:
         SMS/MMS transport with end-to-end encryption, demonstrates my interest in practical secure
         communication across heterogeneous networks. I aim to contribute to making private, resilient
         communication systems more accessible through rigorous protocol specification and formal analysis.
-    - profiles: [research_crypto]
+    - profiles: [cryptography]
       text: >-
         My research focuses on applied cryptography and traffic-analysis-resistant protocols.
         My work on TYPHOON specifies a UDP-based transport that eliminates all cleartext fields,
@@ -22,7 +22,7 @@ research:
         economically impractical. I am interested in building formally specified, cryptographically
         rigorous protocols for private peer-to-peer communication, with particular attention to
         post-quantum primitives and their deployment constraints.
-    - profiles: [research_networking]
+    - profiles: [networking]
       text: >-
         My research focuses on network protocol design and traffic-obfuscation infrastructure.
         My work on TYPHOON specifies a UDP-based transport designed to make traffic identification

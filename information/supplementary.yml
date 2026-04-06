@@ -2,19 +2,26 @@
 
 supplementary:
   coursework_repo: https://github.com/pseusys/current
-  # TODO(current-repo): review this repo and extract:
-  #   - list of courses from ETU (bachelor's) — especially any related to networks,
-  #     distributed systems, OS, compilers, or ML
-  #   - list of courses from Ensimag (master's) — especially any related to
-  #     networking, security, formal methods, or distributed computing
-  #   - list of courses from HKUST (exchange) — beyond COMP4471
-  #   - any notable course projects that could be mentioned in applications
-  #   - any grades or rankings worth highlighting
+
+  bachelor_courses:
+    university: St. Petersburg Electrotechnical University (ETU)
+    relevant_courses:
+      - Networks and Telecommunications
+      - Cryptography and Information Protection
+      - Operating Systems
+      - Assembly Programming
+      - Web Technologies
+      - Data Storage Fundamentals
+      - Parallel Algorithms
+      - Mathematical Logic and Theory of Algorithms
+      - Algorithms and Data Structures
+      - Machine Learning
 
   personal_blog: https://pseusys.hashnode.dev/
-  # TODO(blog-posts): could not access blog (403). List blog post topics here for
-  #   reference in applications. Are any posts related to networking, crypto, or
-  #   protocol design? Those would be worth mentioning to professors.
+  blog_posts:
+    - title: Network Manager VPN Plugin
+      url: https://pseusys.hashnode.dev/network-manager-vpn-plugin
+      topic: VPN plugin development for Linux NetworkManager; relevant to networking/protocol work
 
   github_profile: https://github.com/pseusys
   linkedin: https://www.linkedin.com/in/pseusys/
@@ -30,20 +37,24 @@ supplementary:
     repos:
       - https://github.com/deeppavlov/chatsky
       - https://github.com/deeppavlov/DeepPavlov
-    # TODO(deeppavlov-contributions): list your specific merged PRs or features.
-    #   Concrete contribution numbers (e.g., "authored 47 PRs", "added feature X")
-    #   are very useful in applications.
+    contributions_url: https://github.com/deeppavlov/chatsky/pulls?q=is%3Apr+author%3Apseusys+
 
   hkust_exchange_details:
     university: Hong Kong University of Science and Technology
     school: School of Science
     period: Sept 2024 - Jan 2025
     courses_taken:
-      - "COMP4471 (Deep Learning in Computer Vision) - imagine_food project"
-      # TODO(hkust-courses): list all other courses taken at HKUST
-    professors_met: "TODO(hkust-professors): any professors you connected with at HKUST"
-    # TODO(hkust-experience): any labs visited, seminars attended, research groups
-    #   you interacted with? This is gold for Asian university applications.
+      - "COMP4634 — Cybersecurity"
+      - "COMP5621 — Computer Networks"
+      - "COMP461 — Cloud Computing & Big Data Systems"
+      - "COMP4471 — Deep Learning in Computer Vision (imagine_food project)"
+      - "ISOM4300 — Information Systems Control and Assurance"
+    professors_met:
+      # Relationship was not close enough for reference letters
+      - https://cse.hkust.edu.hk/~dongdong/
+      - https://home.cse.ust.hk/~csbb/
+      - https://cse.hkust.edu.hk/~songguo/Teaching.html
+      - https://facultyprofiles.hkust.edu.hk/profiles.php?profile=garvin-percy-dias-percy
     projects:
       - name: imagine_food
         description: >-
@@ -52,26 +63,33 @@ supplementary:
         link: https://github.com/pseusys/imagine_food
 
   hogweedgo_details:
-    # TODO(hogweedgo-report): once bachelor's report is shared, extract:
-    #   - exact thesis title (from cover page)
-    #   - supervisor name (from cover page)
-    #   - ML model architecture and training details
-    #   - dataset: source, size, annotation method
-    #   - classification metrics (accuracy, F1, precision, recall)
-    #   - GIS/mapping features
-    #   - any connection to the broader hogweed detection research ecosystem
-    #     (Alekseev's dataset, IEEE UAV paper, etc.)
     link: https://github.com/pseusys/HogWeedGo
     report: https://github.com/pseusys/HogWeedGo/releases/download/v0.0.1-report/report.pdf
+    thesis_title: "Potentially Dangerous to Humans Plant Species Spread Monitoring Software System Developing"
+    supervisor: "Mikhail M. Zaslavsky, Ph.D. (Candidate of Technical Sciences), Associate Professor, Department MOEVM, Faculty KTI, ETU"
+    ml_model:
+      architecture: MobileNetV2 (transfer learning, pretrained on ImageNet)
+      classes: [hogweed, cetera, other]
+      dataset_size: 7100 images per class
+      dataset_sources: [OpenImages, iNaturalist]
+      accuracy: 92%
+      inference_time: 0.4s
+      model_size: 79.3 MB (TensorFlow Lite)
+    stack:
+      - Python / Django / DRF
+      - TensorFlow
+      - Dart / Flutter / BLoC
+      - PostGIS / PostgreSQL
+      - Docker
 
   follow_the_drow_details:
-    # TODO(ftd-more): once 'current' repo contents are reviewed, add:
-    #   - any related coursework that fed into this project
-    #   - any follow-up work done after the internship ended
-    #   - whether the FTD library/Docker image was adopted by the lab
-    #   - Olivier Aycard's exact academic title for reference letters
     link: https://github.com/pseusys/follow_the_drow
     report_in_current_repo: true
+    note: >-
+      Full quantitative performance comparison (DROW vs algorithmic detector) was not
+      completed due to insufficient computing power. Key finding: DROW dataset annotation
+      errors made fair evaluation infeasible. Proposed solutions: Annotator node for manual
+      re-annotation, C++ PyTorch port for speed.
 
   typhoon_paper_details:
     full_name: "TYPHOON: Transfer Your Packets Hidden Over Observed Networks"
@@ -90,14 +108,6 @@ supplementary:
       - X25519 (key exchange)
       - Ed25519 (signatures)
       - BLAKE3 (hashing)
-    # TODO(typhoon-evaluation): does the paper include any evaluation?
-    #   (e.g., benchmarks, traffic analysis resistance tests, throughput measurements)
-    #   If not yet, what evaluation is planned?
+    evaluation: No empirical evaluation yet; benchmarks and traffic analysis resistance tests are planned.
 
-  target_universities: "TODO(target-unis): list of target PhD programs and professors"
-  # TODO(target-unis-detail): for each target, include:
-  #   - university name and department
-  #   - professor name and research area
-  #   - why this professor's work aligns with your interests
-  #   - application deadline
-  #   - any specific requirements (GRE, research proposal, etc.)
+  target_universities: see information/phd_advisors.md for the full list of target PhD programs and professors

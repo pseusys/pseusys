@@ -6,9 +6,9 @@ SHELL = /bin/bash
 
 PATH := venv/bin:$(PATH)
 
-PROFILES = frontend backend devops all research_crypto research_networking
+PROFILES = frontend backend devops all research cryptography networking
 PROFILE = all
-BASE_TEX = $(if $(filter research_crypto research_networking,$(PROFILE)),base_research,base)
+BASE_TEX = $(if $(filter research cryptography networking,$(PROFILE)),base_research,base)
 
 
 help:
