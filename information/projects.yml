@@ -72,7 +72,7 @@ projects:
     desc: >-
       COMP4471/ELEC4240 final project at HKUST: food allergen detection and calorie
       estimation using YOLOv11n (nano) with two-stage transfer learning on the
-      Allergen30 dataset (30 classes, 416×416, 3× augmentation). Achieved mAP\@50 of
+      Allergen30 dataset (30 classes, 416×416, 3× augmentation). Achieved mAP@50 of
       0.662 (precision 0.707, recall 0.602). Model exported to quantised INT8 ONNX and
       deployed as a React/TypeScript web app with custom in-browser NMS logic.
       Report written to CVPR standard, auto-published via GitHub Actions.
