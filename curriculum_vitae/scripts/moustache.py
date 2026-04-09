@@ -34,7 +34,7 @@ class ProfileDict(Dict):
                 return self._find_subdict(subinfo[key], subpath[final + 1:])
         elif subpath in subinfo:
             return subinfo[subpath]
-        raise RuntimeError(f"There is no entry '{subpath}' in info dictionary!")
+        raise KeyError(subpath)
 
     def _filter_iter(self, iterable: List) -> List:
         parent = PROFILE_PARENTS.get(self.profile)
