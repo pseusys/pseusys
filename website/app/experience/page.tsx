@@ -93,7 +93,7 @@ export default function Experience() {
           {skills.map((item, i) => (
             <div key={i} className="flex justify-between items-baseline gap-4">
               <span className="text-gray-700 text-sm">{item.name}</span>
-              <span className="text-xs text-gray-400 shrink-0">{item.years}y</span>
+              <span className="text-xs text-gray-400 shrink-0">{item.years} years</span>
             </div>
           ))}
         </div>
