@@ -51,7 +51,7 @@ work:
       start: Feb '24
       end: Aug '24
       profiles:
-        - devops
+        - research
 
     - job: Full Stack Intern
       place: Amadeus - Nice, France
