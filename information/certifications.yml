@@ -7,4 +7,4 @@ certifications:
     - name: Cambridge Advanced
       result: C1 grade B
       desc: A certificate of English language proficiency for non-native English language speakers (2022).
-      profiles: ["all"]
+      profiles: ["all", "research", "cryptography", "networking"]

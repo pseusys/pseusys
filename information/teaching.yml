@@ -1,0 +1,18 @@
+teaching:
+  items:
+    - role: Programming Club Instructor
+      place: ETU MOEVM School, St. Petersburg
+      start: Sep 2022
+      end: Feb 2023
+      description: >-
+        Led a weekly programming club for high school students as part of ETU's educational
+        outreach program. Covered algorithmic thinking, data structures, and practical coding in Python.
+      profiles: [research, cryptography, networking, all]
+    - role: Masterclass Instructor
+      place: St. Petersburg Classical Gymnasium \#610
+      start: Sep 2023
+      end: Dec 2023
+      description: >-
+        Delivered a semester-long technical masterclass for high school students at the instructor's
+        alma mater. Introduced computer science fundamentals and introductory programming concepts.
+      profiles: [research, cryptography, networking, all]

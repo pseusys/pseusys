@@ -118,6 +118,15 @@ export interface Publications {
   theses: ThesisItem[];
 }
 
+export interface TeachingItem {
+  role: string;
+  place: string;
+  start: string;
+  end: string;
+  description: string;
+  profiles: string[];
+}
+
 // ── Loaders ──────────────────────────────────────────────────────────────────
 
 export function getContact(): Contact {
@@ -146,4 +155,8 @@ export function getEvents(): EventItem[] {
 
 export function getPublications(): Publications {
   return (load<{ publications: Publications }>('publications.yml')).publications;
+}
+
+export function getTeaching(): TeachingItem[] {
+  return (load<{ teaching: { items: TeachingItem[] } }>('teaching.yml')).teaching.items;
 }

@@ -1,10 +1,11 @@
-import { getWork, getEducation, getEvents } from '@/lib/data';
+import { getWork, getEducation, getEvents, getTeaching } from '@/lib/data';
 import { mdToHtml } from '@/lib/markdown';
 
 export default function Experience() {
   const work = getWork().filter(item => item.profiles.includes('research'));
   const education = getEducation().filter(item => !item.profiles.includes('none'));
   const events = getEvents().filter(item => !item.profiles.includes('none'));
+  const teaching = getTeaching().filter(item => !item.profiles.includes('none'));
 
   return (
     <div className="max-w-2xl space-y-10">
@@ -64,6 +65,24 @@ export default function Experience() {
           ))}
         </div>
       </section>
+
+      {teaching.length > 0 && (
+        <section>
+          <h2 className="text-2xl font-bold">Teaching</h2>
+          <div className="mt-6 space-y-6">
+            {teaching.map((item, i) => (
+              <div key={i}>
+                <div className="flex justify-between items-baseline gap-4">
+                  <span className="font-semibold">{item.role}</span>
+                  <span className="text-sm text-gray-500 shrink-0">{item.start} – {item.end}</span>
+                </div>
+                <div className="text-sm text-gray-600 mb-1">{item.place}</div>
+                <p className="text-gray-700 text-sm leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
     </div>
   );
