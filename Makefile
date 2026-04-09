@@ -33,11 +33,11 @@ build-all-cv:
 	@ # Build CV PDFs for all profiles
 	for PROF in $(PROFILES)
 	do
-		if make -s --no-print-directory build-cv PROFILE=$$PROF > /dev/null; then
-			echo -e "\e[32;1mCV generated for profile '$$PROF'\e[0m"
-		else
-			echo -e "\e[31;1mError generating CV for profile '$$PROF'\e[0m" || exit 1
-		fi
+		output=$$(make -s --no-print-directory build-cv PROFILE=$$PROF 2>&1) || {
+			echo -e "\e[31;1mError generating CV for profile '$$PROF':\e[0m"
+			echo "$$output"
+			exit 1
+		}
 	done
 .PHONY: build-all-cv
 
