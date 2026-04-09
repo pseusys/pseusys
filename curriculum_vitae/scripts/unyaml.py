@@ -19,6 +19,7 @@ _LATEX_LINK = r"\\href{\g<url>}{\g<text>}"
 # Matches already-converted \href{url}{text} blocks — used to protect URLs
 # from special-character escaping that follows link conversion.
 _LATEX_HREF_SPLIT = compile(r"(\\href\{[^}]*\}\{[^}]*\})")
+_URL_SPLIT = compile(r"(https?://[^\s}]+)")
 
 _UNICODE_SUBS = [
     (compile(r"×"), r"$\\times$"),
@@ -60,7 +61,7 @@ def _md_process_lines(string: str) -> str:
 
 
 def _escape_latex_specials(text: str) -> str:
-    """Escape & and # for LaTeX, but leave URLs inside \\href{}{} untouched."""
+    """Escape &, #, _ for LaTeX, but leave URLs and \\href{}{} untouched."""
     parts = _LATEX_HREF_SPLIT.split(text)
     result = []
     for i, part in enumerate(parts):
@@ -68,8 +69,13 @@ def _escape_latex_specials(text: str) -> str:
             # Odd indices are \href{}{} matches — leave verbatim
             result.append(part)
         else:
-            # Even indices are plain text — escape LaTeX special characters
-            result.append(part.replace("&", r"\&").replace("#", r"\#"))
+            # Even indices are plain text — protect raw URLs, then escape
+            url_parts = _URL_SPLIT.split(part)
+            for j, url_part in enumerate(url_parts):
+                if j % 2 == 1:
+                    result.append(url_part)  # Raw URL — leave untouched
+                else:
+                    result.append(url_part.replace("&", r"\&").replace("#", r"\#").replace("_", r"\_"))
     return "".join(result)
 
 

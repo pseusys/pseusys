@@ -41,16 +41,19 @@ Each item in the YAML sources has a `profiles:` field. Only items matching the a
 | `frontend` | Frontend-focused CV |
 | `backend` | Backend-focused CV |
 | `devops` | DevOps-focused CV |
-| `all` | General-purpose CV (all non-research items) |
-| `cryptography` | Research CV with cryptography focus |
-| `networking` | Research CV with networking focus |
+| `all` | General-purpose CV |
+| `research` | Research CV (base profile for academic applications) |
+| `cryptography` | Research CV with cryptography focus (inherits `research`) |
+| `networking` | Research CV with networking focus (inherits `research`) |
+
+Profile inheritance is defined in `curriculum_vitae/scripts/support.py` (`PROFILE_PARENTS`). Child profiles include all items tagged with either their own name or their parent's name — so items tagged `research` automatically appear in `cryptography` and `networking` builds.
 
 Special profile values in YAML:
 
-- `all` — item appears in every non-research profile
+- `all` — item appears in every profile
 - `none` — item is hidden from all profiles (used to keep items in source without publishing them)
 
-Research profiles use `base_research.tex` (single-column: header → contact + research interests row → full-width sections). All other profiles use `base.tex` (two-column paracol layout).
+Research profiles (`research`, `cryptography`, `networking`) use `base_research.tex` (single-column: header → contact + research interests → full-width sections: education, work, publications, projects, events, teaching, skills + certifications). All other profiles use `base.tex` (two-column paracol layout).
 
 ### Build features
 
@@ -68,8 +71,9 @@ Research profiles use `base_research.tex` (single-column: header → contact + r
 | `–` (en-dash) | `--` | `–` (passed through) |
 | `&` | `\&` (auto-escaped) | `&amp;` (auto-escaped) |
 | `#` | `\#` (auto-escaped) | `#` (safe in HTML) |
+| `_` | `\_` (auto-escaped) | `_` (safe in HTML) |
 
-URL content inside `[text](url)` links is never subject to `&` / `#` escaping — it is passed verbatim to `\href{}` in LaTeX (where `hyperref` handles it) and to the `href` attribute in HTML (where `&amp;` in query strings is correct).
+URL content — whether inside `[text](url)` links or as a bare `https://…` string — is never subject to escaping in LaTeX. The LaTeX pipeline protects both already-converted `\href{url}{text}` blocks and any remaining raw URLs before applying character escapes, so underscores in URLs (e.g. in GitHub repo names) are passed through untouched.
 
 #### Lambda functions
 
@@ -117,8 +121,8 @@ Pages are populated at build time from the same YAML sources used by the CV gene
 
 | Route | Source files | Notes |
 |---|---|---|
-| `/` | `contact.yml`, `research.yml` | Name, title, social links, intro paragraph |
+| `/` | `contact.yml` | Name, title, social links, bio |
 | `/research` | `research.yml`, `publications.yml` | Research statement + keywords; papers, reports, theses |
-| `/experience` | `work.yml`, `education.yml`, `events.yml` | Work (research profile), education, events & recognitions |
+| `/experience` | `work.yml`, `education.yml`, `events.yml`, `teaching.yml` | Work (research profile), education, events & recognitions, teaching |
 | `/projects` | `projects.yml` | All projects except `profiles: [none]` |
 | `/cv` | — | Static links to PDF artifacts from the GitHub `curriculum-vitae` release |
