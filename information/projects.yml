@@ -17,8 +17,9 @@ projects:
     start: 2024
     end: Present
     profiles:
-      - all
-      - research
+      - frontend
+      - backend
+      - devops
 
   - name: Airwire
     tools: Protobuf, X25519, XChaCha20-Poly1305, Firebase, SMS/MMS
@@ -65,7 +66,6 @@ projects:
       - frontend
       - backend
       - devops
-      - research
 
   - name: imagine_food
     tools: Python, PyTorch, Ultralytics, ONNX, TypeScript, React
@@ -100,8 +100,9 @@ projects:
     start: 2023
     end: 2024
     profiles:
-      - all
-      - research
+      - frontend
+      - backend
+      - devops
 
   - name: MushOS
     tools: NASM, C, CMake, QEMU

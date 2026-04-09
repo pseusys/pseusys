@@ -14,7 +14,8 @@ class ProfileDict(Dict):
         self.profile = profile
         self.functions = {
             self._COUNT_KEY: self._count,
-            self._MAX_KEY: self._max
+            self._MAX_KEY: self._max,
+            "join()": self._join,
         }
 
     def _count(self, text: str, render: Callable) -> str:
@@ -25,6 +26,13 @@ class ProfileDict(Dict):
         container, key = (arg.strip() for arg in text.split(","))
         iterable = [elem[key] for elem in eval(render(container, self))]
         return str(max(iterable))
+
+    def _join(self, text: str, render: Callable) -> str:
+        container_key, field_key = (arg.strip() for arg in text.split(",", 1))
+        items = self[container_key]
+        if isinstance(items, list):
+            return ", ".join(str(item[field_key]) for item in items)
+        return ""
 
     def _find_subdict(self, subinfo: Dict, subpath: str) -> str:
         if "." in subpath:

@@ -127,6 +127,25 @@ export interface TeachingItem {
   profiles: string[];
 }
 
+export interface SkillItem {
+  name: string;
+  years: number;
+  profiles: string[];
+}
+
+export interface LanguageItem {
+  name: string;
+  level: string;
+  profiles: string[];
+}
+
+export interface CertificationItem {
+  name: string;
+  result: string;
+  desc: string;
+  profiles: string[];
+}
+
 // ── Loaders ──────────────────────────────────────────────────────────────────
 
 export function getContact(): Contact {
@@ -159,4 +178,16 @@ export function getPublications(): Publications {
 
 export function getTeaching(): TeachingItem[] {
   return (load<{ teaching: { items: TeachingItem[] } }>('teaching.yml')).teaching.items;
+}
+
+export function getSkills(): SkillItem[] {
+  return (load<{ skills: { items: SkillItem[] } }>('skills.yml')).skills.items;
+}
+
+export function getLanguages(): LanguageItem[] {
+  return (load<{ languages: { items: LanguageItem[] } }>('languages.yml')).languages.items;
+}
+
+export function getCertifications(): CertificationItem[] {
+  return (load<{ certifications: { items: CertificationItem[] } }>('certifications.yml')).certifications.items;
 }
