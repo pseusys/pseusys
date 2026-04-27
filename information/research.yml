@@ -2,17 +2,17 @@ research:
   statements:
     - profiles: [research]
       text: >-
-        My research interests lie at the intersection of network protocol design, distributed systems,
-        and applied cryptography. I am particularly interested in developing communication protocols
-        that resist traffic analysis and network surveillance, designing secure peer-to-peer
-        communication architectures, and exploring hybrid transport systems that bridge different
-        network technologies. My work on the TYPHOON protocol — a UDP-based transport-layer protocol
-        that eliminates all cleartext fields, generates decoy traffic, and mimics generic protocol
-        behavior to make traffic identification economically impractical — exemplifies this focus.
-        My parallel work on Airwire, a hybrid messenger that seamlessly switches between web API and
-        SMS/MMS transport with end-to-end encryption, demonstrates my interest in practical secure
-        communication across heterogeneous networks. I aim to contribute to making private, resilient
-        communication systems more accessible through rigorous protocol specification and formal analysis.
+        My research interests span network protocol design, distributed systems, and applied
+        cryptography, with a focus on how security and correctness properties can be designed
+        into networked systems from first principles. I approach this from both directions:
+        building protocols that make strong security guarantees in practice (TYPHOON, a
+        privacy-preserving UDP transport; Airwire, a hybrid web/SMS messenger) and reasoning
+        formally about correctness under adversarial and uncertain network conditions. For
+        doctoral research, I am interested in exploring this boundary more broadly — across
+        wireless and IoT protocols, distributed consensus and fault tolerance, robotics and
+        autonomous systems, and security analysis at the network and transport layers. I aim
+        to work at the intersection of rigorous theoretical foundations and real-world
+        protocol engineering.
     - profiles: [cryptography]
       text: >-
         My research focuses on applied cryptography and traffic-analysis-resistant protocols.
@@ -33,4 +33,4 @@ research:
         inspection and network-level adversaries.
   keywords:
     - profiles: [research]
-      text: "Network protocol design; Distributed systems; Peer-to-peer networks; Applied cryptography; Traffic analysis resistance; Network observability; Traffic obfuscation; Secure messaging; Post-quantum cryptography; Hybrid transport systems"
+      text: "Network protocol design; Distributed systems; Peer-to-peer networks; Applied cryptography; Transport protocols; Wireless and IoT security; Distributed algorithms; Robotics and autonomous systems; Peer-to-peer networks; Traffic analysis; Formal protocol specification"
