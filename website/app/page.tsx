@@ -16,12 +16,15 @@ export default function Home() {
       </p>
       <p className="mt-3 text-gray-700 leading-relaxed">
         Currently, I work as an R&D engineer at Synopsys, where I built a schema-driven code
-        generation system for the DPF simulation framework. My research interests center on
-        privacy-preserving network protocols — in particular, designing systems where encrypted
-        traffic is indistinguishable from generic background noise.
+        generation system for the DPF simulation framework. My research interests span network
+        protocol design, distributed systems, and applied cryptography — with a particular focus
+        on privacy and security. I am broadly open to research that combines rigorous systems
+        thinking with real-world deployment concerns, from traffic-analysis-resistant protocols
+        and post-quantum cryptography to distributed algorithms, edge computing, and ML-assisted
+        network security.
       </p>
       <p className="mt-3 text-gray-700 leading-relaxed">
-        I am actively looking for PhD positions in network security and privacy.
+        I am actively looking for PhD positions in computer science, with a focus on network security, privacy, and related areas.
       </p>
       <p className="mt-3 text-gray-700 leading-relaxed">
         Outside of work, I enjoy applying cryptography and machine learning to personal projects,

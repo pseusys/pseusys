@@ -2,7 +2,7 @@
 
 R&D Engineer at Synopsys · MSc Informatics (Grenoble INP – Ensimag / HKUST) · BSc Software Engineering (ETU LETI)
 
-My interests lie at the intersection of **network protocol design**, **distributed systems**, and **applied cryptography** — particularly protocols that resist traffic analysis, secure peer-to-peer architectures, and hybrid transport systems. On the engineering side I work across backend systems, DevOps tooling, and code generation pipelines.
+My interests span **network protocol design**, **distributed systems**, **applied cryptography**, and **systems security** — with a focus on privacy, resilience, and rigorous specification. I am open to research directions across computer science where these themes intersect, including post-quantum cryptography, privacy-preserving computation, edge computing, and ML for network security. On the engineering side I work across backend systems, DevOps tooling, and code generation pipelines.
 
 I also write about systems programming on my [blog](https://pseusys.github.io/pseusys/).
 
