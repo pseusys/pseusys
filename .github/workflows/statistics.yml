@@ -1,0 +1,74 @@
+name: Waka Readme
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - source
+    paths:
+      - 'README.md'
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  update-readme:
+    name: Update Readme with Metrics
+    runs-on: ubuntu-latest
+    steps:
+      - name: Calculate statistics and push it onto main branch 📈
+        uses: anmol098/waka-readme-stats@master
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          SHOW_UPDATED_DATE: "False"
+          SHOW_TOTAL_CODE_TIME: "True"
+          SHOW_LINES_OF_CODE: "True"
+          SHOW_PROFILE_VIEWS: "False"
+          SHOW_DAYS_OF_WEEK: "False"
+          SHOW_OS: "False"
+          SHOW_PROJECTS: "False"
+          SHOW_TIMEZONE: "False"
+          SHOW_EDITORS: "False"
+          SHOW_LANGUAGE: "False"
+          SHOW_LOC_CHART: "True"
+          COMMIT_SINGLE: "True"
+          PULL_BRANCH_NAME: source
+          PUSH_BRANCH_NAME: main
+          SYMBOL_VERSION: 2
+          FORCE_ADD: "True"
+
+  generate-cards:
+    name: Generate GitHub Stats Cards
+    needs: update-readme
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout main branch 🛎️
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Generate stats card 📊
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: username=pseusys&show_icons=true&count_private=true&theme=gruvbox
+          path: assets/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate top languages card 🗣️
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: username=pseusys&layout=compact
+          path: assets/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit and push cards 💾
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f assets/stats.svg assets/top-langs.svg
+          git commit -m "Update GitHub stats cards" || exit 0
+          git push

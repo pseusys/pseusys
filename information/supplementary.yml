@@ -1,0 +1,111 @@
+# Supplementary information (not rendered on CV, used for applications and emails)
+
+supplementary:
+  coursework_repo: https://github.com/pseusys/current
+
+  bachelor_courses:
+    university: St. Petersburg Electrotechnical University (ETU)
+    relevant_courses:
+      - Networks and Telecommunications
+      - Cryptography and Information Protection
+      - Operating Systems
+      - Assembly Programming
+      - Web Technologies
+      - Data Storage Fundamentals
+      - Parallel Algorithms
+      - Mathematical Logic and Theory of Algorithms
+      - Algorithms and Data Structures
+      - Machine Learning
+
+  personal_blog: https://pseusys.hashnode.dev/
+  blog_posts:
+    - title: Network Manager VPN Plugin
+      url: https://pseusys.hashnode.dev/network-manager-vpn-plugin
+      topic: VPN plugin development for Linux NetworkManager; relevant to networking/protocol work
+
+  github_profile: https://github.com/pseusys
+  linkedin: https://www.linkedin.com/in/pseusys/
+
+  deeppavlov_details:
+    organization: DeepPavlov.ai (MIPT Neural Networks and Deep Learning Lab)
+    role: Software Engineer
+    period: May 2022 - Jan 2025
+    description: >-
+      Contributed to Chatsky open-source conversational AI framework. Worked on neural network
+      model wrappers, CI/CD pipelines, and documentation. The framework relies heavily on
+      asynchronous and multithreaded architecture for efficient distributed LLM request processing.
+    repos:
+      - https://github.com/deeppavlov/chatsky
+      - https://github.com/deeppavlov/DeepPavlov
+    contributions_url: https://github.com/deeppavlov/chatsky/pulls?q=is%3Apr+author%3Apseusys+
+
+  hkust_exchange_details:
+    university: Hong Kong University of Science and Technology
+    school: School of Science
+    period: Sept 2024 - Jan 2025
+    courses_taken:
+      - "COMP4634 — Cybersecurity"
+      - "COMP5621 — Computer Networks"
+      - "COMP461 — Cloud Computing & Big Data Systems"
+      - "COMP4471 — Deep Learning in Computer Vision (imagine_food project)"
+      - "ISOM4300 — Information Systems Control and Assurance"
+    professors_met:
+      # Relationship was not close enough for reference letters
+      - https://cse.hkust.edu.hk/~dongdong/
+      - https://home.cse.ust.hk/~csbb/
+      - https://cse.hkust.edu.hk/~songguo/Teaching.html
+      - https://facultyprofiles.hkust.edu.hk/profiles.php?profile=garvin-percy-dias-percy
+    projects:
+      - name: imagine_food
+        description: >-
+          ML-based food recognition/classification, COMP4471 final project.
+          Uses CVPR-template report, Poetry for dependency management, Jupyter notebooks.
+        link: https://github.com/pseusys/imagine_food
+
+  hogweedgo_details:
+    link: https://github.com/pseusys/HogWeedGo
+    report: https://github.com/pseusys/HogWeedGo/releases/download/v0.0.1-report/report.pdf
+    thesis_title: "Potentially Dangerous to Humans Plant Species Spread Monitoring Software System Developing"
+    supervisor: "Mikhail M. Zaslavsky, Ph.D. (Candidate of Technical Sciences), Associate Professor, Department MOEVM, Faculty KTI, ETU"
+    ml_model:
+      architecture: MobileNetV2 (transfer learning, pretrained on ImageNet)
+      classes: [hogweed, cetera, other]
+      dataset_size: 7100 images per class
+      dataset_sources: [OpenImages, iNaturalist]
+      accuracy: 92%
+      inference_time: 0.4s
+      model_size: 79.3 MB (TensorFlow Lite)
+    stack:
+      - Python / Django / DRF
+      - TensorFlow
+      - Dart / Flutter / BLoC
+      - PostGIS / PostgreSQL
+      - Docker
+
+  follow_the_drow_details:
+    link: https://github.com/pseusys/current/tree/master/pr3
+    report_in_current_repo: true
+    note: >-
+      Full quantitative performance comparison (DROW vs algorithmic detector) was not
+      completed due to insufficient computing power. Key finding: DROW dataset annotation
+      errors made fair evaluation infeasible. Proposed solutions: Annotator node for manual
+      re-annotation, C++ PyTorch port for speed.
+
+  typhoon_paper_details:
+    full_name: "TYPHOON: Transfer Your Packets Hidden Over Observed Networks"
+    status: Drafting / early writing
+    key_contributions:
+      - Full protocol specification (800+ lines of documentation)
+      - Rust reference implementation with multiple crypto feature flags
+      - Session manager / flow manager architecture for traffic obfuscation
+      - Decoy packet generation (noisy, sparse, smooth modes)
+      - Fake header mimicry to simulate generic protocol behavior
+      - Post-quantum readiness via Classic McEliece KEM
+    crypto_primitives:
+      - XChaCha20-Poly1305 (software mode)
+      - AES-GCM-256 (hardware mode with AES-NI)
+      - Classic McEliece (post-quantum KEM)
+      - X25519 (key exchange)
+      - Ed25519 (signatures)
+      - BLAKE3 (hashing)
+    evaluation: No empirical evaluation yet; benchmarks and traffic analysis resistance tests are planned.
