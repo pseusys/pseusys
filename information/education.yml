@@ -1,0 +1,30 @@
+education:
+  items:
+    - title: Ms. Sc. - Informatics (MoSIG)
+      start: 2023
+      end: 2025
+      place: Université Grenoble Alpes / Grenoble INP - Ensimag
+      result: |
+        Graduated with **15.343** of **20** average score (French grading system).
+        - Notable courses: Programming Languages and Compiler Design (14.1), Principles of Operating Systems (17.45), Introduction to Distributed Systems (16.75), Computer Networks Principles (17.24), Parallel Algorithms and Programming (15.6).
+        - Exchange semester at HKUST (16.0/20): Computer Security, Computer Networks, Deep Learning for Computer Vision, Distributed AI Systems.
+        - Master's thesis: researched binary schema specification formats (FlatBuffers, Protobuf, Cap'n Proto, MessagePack) and designed a schema-driven code generation pipeline for multi-language client libraries in the Ansys DPF framework; supervised by Camille Bellot.
+      profiles:
+        - all
+    - title: B. Tech. - Software Engineering
+      start: 2018
+      end: 2022
+      place: St. Petersburg Electrotechnical University (ETU), Dept. MOEVM, Faculty KTI
+      result: |
+        Graduated with **4.4** of **5.0** average score (Russian grading system). Specialization: Development of Software Information Systems.
+        - Notable courses: Operating Systems (A), Networks and Telecommunications (A), Algorithms and Data Structures (A), Mathematical Logic and Theory of Algorithms (A), Cryptography and Information Protection (A), Parallel Algorithms (A), Machine Learning (A), Assembly Programming (A).
+        - Bachelor's thesis: designed and built a crowd-sourced monitoring system for Sosnowsky's hogweed, an invasive phototoxic plant species. The system combines a Django/PostGIS backend, a Flutter mobile client for field reporting, and a TensorFlow Lite image classifier for automated species identification; grade: excellent.
+      profiles:
+        - all
+    - title: High school
+      start: 2011
+      end: 2018
+      place: St. Petersburg Classical Gymnasium #610
+      result: Passed with **4.8** of **5.0** average score (Russian grading system).
+      profiles:
+        - none
