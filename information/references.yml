@@ -1,0 +1,37 @@
+references:
+  items:
+    - name: Camille Bellot
+      title: Research and Development Engineer
+      institution: Ansys / Synopsys - Lyon, France
+      email: camille.bellot@synopsys.com
+      relationship: Master's internship supervisor; supervised code generation project for simulation framework
+      profiles:
+        - all
+    - name: Olivier Aycard
+      title: Full Professor in Computer Science
+      institution: Grenoble-INP PHELMA / GIPSA Lab, Université Grenoble Alpes
+      email: olivier.aycard@grenoble-inp.fr
+      relationship: Research internship supervisor; supervised LiDAR person detection comparison project (summer 2023)
+      profiles:
+        - all
+    - name: Mark Zaslavsky
+      title: Ph.D. (Candidate of Technical Sciences), Associate Professor
+      institution: St. Petersburg Electrotechnical University (ETU), Department MOEVM
+      email: mark.zaslavskiy@gmail.com
+      relationship: Bachelor's thesis supervisor (HogWeedGo project)
+      profiles:
+        - all
+    - name: Denis Kuznetsov
+      title: Research Engineer, Neural Networks and Deep Learning Lab
+      institution: DeepPavlov.ai (MIPT)
+      email: kuznetsov.dp@phystech.edu
+      relationship: Engineering manager during software engineering role (May 2022 - Jan 2025)
+      profiles:
+        - all
+    - name: Nicolas Nordmann
+      title: Manager, Software Development
+      institution: Amadeus - Nice, France
+      email: nicolas.nordmann@amadeus.com
+      relationship: Amadeus internship supervisor (automated testing / mutation framework project)
+      profiles:
+        - all
