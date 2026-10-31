@@ -1,0 +1,18 @@
+languages:
+  items:
+    - name: Russian
+      level: Native
+      profiles:
+        - all
+    - name: English
+      level: C1 (Cambridge Advanced, grade B)
+      profiles:
+        - all
+    - name: French
+      level: A1-A2 (basic)
+      profiles:
+        - all
+    - name: German
+      level: A1-A2 (basic)
+      profiles:
+        - all
