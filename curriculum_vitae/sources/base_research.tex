@@ -1,0 +1,69 @@
+\documentclass[8pt, a4paper]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage{xstring, xifthen}
+\usepackage[default]{raleway}
+\usepackage[T1]{fontenc}
+\usepackage{moresize}
+\usepackage{fontawesome}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{transparent}
+\usepackage{color}
+\usepackage[colorlinks = true, urlcolor = blue]{hyperref}
+\usepackage{enumitem}
+
+\input{setup}
+\input{support}
+
+
+\begin{document}
+
+	% HEADER (full-width)
+	\input{../build/header}
+	\vspace{-12pt}
+
+	% CONTACT (left) + RESEARCH INTERESTS (right)
+	\noindent
+	\begin{minipage}[t]{0.26\textwidth}
+		\input{../build/contact_research}
+	\end{minipage}%
+	\hspace{0.02\textwidth}%
+	\begin{minipage}[t]{0.72\textwidth}
+		\input{../build/research}
+	\end{minipage}
+
+	\vspace{8pt}
+
+	% EDUCATION
+	\input{../build/education}
+
+	% WORK EXPERIENCE
+	\input{../build/work}
+
+	% PUBLICATIONS
+	\input{../build/publications}
+
+	% PROJECTS
+	\input{../build/projects}
+
+	% EVENTS
+	\input{../build/events}
+
+	% TEACHING
+	\input{../build/teaching}
+
+	\vspace{8pt}
+
+	% SKILLS (comma-separated, full-width)
+	\input{../build/skills_inline}
+
+	\vspace{4pt}
+
+	% CERTIFICATIONS (full-width)
+	\input{../build/certifications}
+
+\end{document}
